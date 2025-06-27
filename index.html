@@ -251,7 +251,12 @@
           <a href="mailto:xaviervt94@gmail.com">xaviervt94@gmail.com</a> or send
           me a message below.
         </p>
-        <form action="https://formspree.io/f/xdkzydan" method="POST">
+
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xdkzydan"
+          method="POST"
+        >
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea
@@ -259,9 +264,43 @@
             placeholder="Tell me what you need..."
             required
           ></textarea>
+          <!-- Optional honeypot for spam protection -->
+          <input type="text" name="_gotcha" style="display: none" />
           <button type="submit" class="btn">Send Message</button>
         </form>
+
+        <p id="form-status" style="margin-top: 1rem; font-weight: 600"></p>
       </section>
+
+      <script>
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              status.innerText = "Thanks! I’ll be in touch shortly.";
+              form.reset();
+            } else {
+              status.innerText =
+                "Oops! Something went wrong. Please try again.";
+            }
+          } catch (error) {
+            status.innerText = "Oops! There was a problem submitting the form.";
+          }
+        });
+      </script>
     </main>
 
     <footer>
