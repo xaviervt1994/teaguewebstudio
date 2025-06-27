@@ -90,7 +90,7 @@
       rel="stylesheet"
     />
 
-    <!-- Stylesheet (Vite will handle this) -->
+    <!-- Stylesheet -->
 
     <!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
     <script
@@ -105,8 +105,8 @@
       gtag("js", new Date());
       gtag("config", "G-XXXXXXXXXX");
     </script>
-    <script type="module" crossorigin src="/teaguewebstudio/assets/index-BsSqFFKm.js"></script>
-    <link rel="stylesheet" crossorigin href="/teaguewebstudio/assets/index-Dqw6FsM2.css">
+    <script type="module" crossorigin src="/teaguewebstudio/assets/index-CxK0QaBa.js"></script>
+    <link rel="stylesheet" crossorigin href="/teaguewebstudio/assets/index-3UcU6T04.css">
   </head>
 
   <body>
@@ -139,8 +139,11 @@
 
         <main>
           <section class="services">
-            <h2 class="reveal">What I Do</h2>
-            <div class="service-grid">
+            <h2 class="gsap-reveal">What I Do</h2>
+            <div
+              class="service-grid gsap-reveal"
+              data-stagger-children=".service"
+            >
               <div class="service">
                 <h3>Web Development</h3>
                 <p>
@@ -205,22 +208,21 @@
           </section>
 
           <section class="why-me">
-            <h2 class="reveal">Why Work With Me?</h2>
-            <ul>
-              <li class="reveal">✔ 100% custom-built — no bloated themes</li>
-              <li class="reveal">
-                ✔ Focused on speed, SEO, and mobile-first design
-              </li>
-              <li class="reveal">✔ Affordable and honest pricing</li>
-              <li class="reveal">
-                ✔ Automation that saves real time and money
-              </li>
+            <h2 class="gsap-reveal">Why Work With Me?</h2>
+            <ul class="gsap-reveal" data-stagger-children="li">
+              <li>✔ 100% custom-built — no bloated themes</li>
+              <li>✔ Focused on speed, SEO, and mobile-first design</li>
+              <li>✔ Affordable and honest pricing</li>
+              <li>✔ Automation that saves real time and money</li>
             </ul>
           </section>
 
           <section id="portfolio" class="portfolio">
-            <h2 class="reveal">Live Projects</h2>
-            <div class="project-grid">
+            <h2 class="gsap-reveal">Live Projects</h2>
+            <div
+              class="project-grid gsap-reveal"
+              data-stagger-children=".project"
+            >
               <div class="project">
                 <h3>Brothers in Business</h3>
                 <p>
@@ -237,8 +239,11 @@
           </section>
 
           <section id="in-development" class="portfolio">
-            <h2 class="reveal">In Development</h2>
-            <div class="project-grid">
+            <h2 class="gsap-reveal">In Development</h2>
+            <div
+              class="project-grid gsap-reveal"
+              data-stagger-children=".project"
+            >
               <div class="project">
                 <h3>Edmond Pools</h3>
                 <p>Local pool cleaning site built with HTML, CSS, and JS.</p>
@@ -278,12 +283,12 @@
           </section>
 
           <section class="stack">
-            <h2 class="reveal">My Toolbox</h2>
-            <p class="reveal">
+            <h2 class="gsap-reveal">My Toolbox</h2>
+            <p class="gsap-reveal">
               These are the tools I use to build fast, powerful, and scalable
               solutions:
             </p>
-            <div class="tech-logos">
+            <div class="tech-logos gsap-reveal" data-stagger-children="span">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
               <span>Shopify</span><span>WordPress</span
               ><span>GoHighLevel</span> <span>Zapier</span><span>EmailJS</span
@@ -294,12 +299,12 @@
           </section>
 
           <section class="learning">
-            <h2 class="reveal">What I'm Learning</h2>
-            <p class="reveal">
+            <h2 class="gsap-reveal">What I'm Learning</h2>
+            <p class="gsap-reveal">
               I’m always improving my stack to build better, faster, and
               smarter. Here’s what I’m working on mastering:
             </p>
-            <div class="tech-logos">
+            <div class="tech-logos gsap-reveal" data-stagger-children="span">
               <span>React</span><span>Redux</span><span>Node.js</span>
               <span>Express.js</span><span>PostgreSQL</span
               ><span>REST APIs</span> <span>Swagger</span
@@ -308,8 +313,8 @@
           </section>
 
           <section class="testimonials">
-            <h2 class="reveal">What Clients Are Saying</h2>
-            <div class="testimonial">
+            <h2 class="gsap-reveal">What Clients Are Saying</h2>
+            <div class="testimonial gsap-reveal">
               <img
                 src="/teaguewebstudio/IMG_5581.jpeg"
                 alt="Haze Manning - Brothers in Business"
@@ -336,14 +341,15 @@
           </section>
 
           <section id="contact" class="contact">
-            <h2 class="reveal">Let’s Build Something</h2>
-            <p class="reveal">
+            <h2 class="gsap-reveal">Let’s Build Something</h2>
+            <p class="gsap-reveal">
               Email me at
               <a href="mailto:xaviervt94@gmail.com">xaviervt94@gmail.com</a> or
               send me a message below.
             </p>
             <form
               id="contact-form"
+              class="gsap-reveal"
               action="https://formspree.io/f/xdkzydan"
               method="POST"
             >
@@ -366,7 +372,7 @@
           </section>
         </main>
 
-        <footer class="reveal">
+        <footer class="gsap-reveal">
           <p>&copy; 2025 Teague Web Studio. Built by Xavier.</p>
         </footer>
       </div>
