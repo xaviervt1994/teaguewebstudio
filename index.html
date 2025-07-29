@@ -142,6 +142,30 @@
         }
       }
 
+      /* Scrollable testimonials styling */
+      .testimonial-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #d1d5db #f9fafb;
+      }
+
+      .testimonial-scroll::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .testimonial-scroll::-webkit-scrollbar-track {
+        background: #f9fafb;
+        border-radius: 3px;
+      }
+
+      .testimonial-scroll::-webkit-scrollbar-thumb {
+        background: #d1d5db;
+        border-radius: 3px;
+      }
+
+      .testimonial-scroll::-webkit-scrollbar-thumb:hover {
+        background: #9ca3af;
+      }
+
       .before-after-container {
         perspective: 1000px;
       }
@@ -825,6 +849,210 @@
       </div>
     </section>
 
+    <!-- Two Types of Offers Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 slide-in">
+          <div
+            class="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 text-sm font-medium mb-4"
+          >
+            🧠 Understanding Your Options
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Two Ways We Can Work Together
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Every business is different. That's why I offer two distinct
+            approaches - choose what fits your situation and budget.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <!-- Option A: Standard Client -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg slide-in">
+            <div class="text-center mb-8">
+              <div
+                class="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-6"
+              >
+                <span class="text-3xl">💰</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                A) Standard Client
+              </h3>
+              <p class="text-lg text-gray-600 mb-6">
+                Pay upfront for full service
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-blue-50 rounded-2xl p-6">
+                <h4 class="font-bold text-gray-800 mb-3">Perfect For:</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Established businesses with budget
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    People who want it done, now
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    Full ownership from day one
+                  </li>
+                </ul>
+              </div>
+
+              <div class="text-center">
+                <div class="text-3xl font-black text-gray-800 mb-2">
+                  $500 - $2,000
+                </div>
+                <p class="text-gray-600 mb-4">Depending on what you need</p>
+                <p class="text-gray-700">
+                  You get the finished product: website, SEO, cards, branding,
+                  etc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Option B: Partnership Client -->
+          <div
+            class="bg-white rounded-3xl p-8 md:p-10 shadow-lg slide-in relative border-2 border-primary"
+          >
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <span
+                class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold"
+                >INNOVATIVE MODEL</span
+              >
+            </div>
+
+            <div class="text-center mb-8">
+              <div
+                class="w-20 h-20 bg-green-100 rounded-3xl flex items-center justify-center mx-auto mb-6"
+              >
+                <span class="text-3xl">🤝</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                B) Partnership Client
+              </h3>
+              <p class="text-lg text-gray-600 mb-6">
+                Lower cost + long-term share
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-green-50 rounded-2xl p-6">
+                <h4 class="font-bold text-gray-800 mb-3">Perfect For:</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    New business owners without cash
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    Those with hustle and potential
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    Want a committed growth partner
+                  </li>
+                </ul>
+              </div>
+
+              <div class="text-center">
+                <div class="text-lg font-black text-gray-800 mb-2">
+                  Small % of Monthly Profit/Revenue
+                </div>
+                <p class="text-gray-600 mb-4">
+                  In exchange for full service upfront
+                </p>
+                <p class="text-gray-700">
+                  I become part of your success + get
+                  <strong>recurring income</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits Comparison -->
+        <div class="mt-16 slide-in">
+          <div
+            class="bg-white rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-lg"
+          >
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-8">
+              Why This Approach Works
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-bold text-blue-600 mb-4">For You (Standard)</h4>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <span
+                      class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                    >
+                      <span class="text-white text-xs">✓</span>
+                    </span>
+                    <span>Full ownership, no ongoing fees</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                    >
+                      <span class="text-white text-xs">✓</span>
+                    </span>
+                    <span>Complete control over your business</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                    >
+                      <span class="text-white text-xs">✓</span>
+                    </span>
+                    <span>Finished product delivered quickly</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-primary mb-4">
+                  For You (Partnership)
+                </h4>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <span
+                      class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3 mt-0.5"
+                    >
+                      <span class="text-white text-xs">✓</span>
+                    </span>
+                    <span>Low upfront investment</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3 mt-0.5"
+                    >
+                      <span class="text-white text-xs">✓</span>
+                    </span>
+                    <span>Ongoing support & strategy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3 mt-0.5"
+                    >
+                      <span class="text-white text-xs">✓</span>
+                    </span>
+                    <span>I'm invested in your long-term success</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Packages Section -->
     <section id="packages" class="py-20 bg-white">
       <div class="container mx-auto px-6">
@@ -833,13 +1061,14 @@
             Choose Your Launch Package
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            From basic online presence to complete business launch - pick the
-            package that fits your goals.
+            Two ways to work together - pick the model that fits your budget and
+            goals.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <!-- Quick Launch Package -->
+        <!-- Two Main Models -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          <!-- Standard Launch Kit -->
           <div
             class="bg-white border-2 border-gray-200 rounded-3xl p-8 slide-in"
           >
@@ -847,73 +1076,75 @@
               <div
                 class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4"
               >
-                <span class="text-2xl">🚀</span>
+                <span class="text-2xl">✅</span>
               </div>
-              <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                Quick Launch
+              <h3 class="text-3xl font-bold text-gray-800 mb-2">
+                Standard Launch Kit
               </h3>
-              <div class="text-4xl font-black text-gray-800 mb-2">$497</div>
-              <p class="text-gray-600 text-sm">
-                Get online fast & look professional
-              </p>
+              <p class="text-gray-600 mb-4">One-Time Payment - Full Control</p>
+              <div class="bg-blue-50 rounded-2xl p-4 mb-4">
+                <div class="text-2xl font-black text-gray-800">
+                  $500 - $1,500
+                </div>
+                <div class="text-sm text-gray-600">
+                  Pay once, own everything
+                </div>
+              </div>
             </div>
 
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">3-page professional website</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Business card design</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Google Business setup</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Contact form integration</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Mobile-responsive design</span>
-              </li>
-            </ul>
+            <div class="mb-8">
+              <p class="text-gray-700 text-center mb-6 italic">
+                Perfect if you want full control and are ready to go!
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700">Custom Website</span>
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700">Google/Yelp Setup</span>
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700">Branding & Print Design</span>
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700">SEO & Strategy</span>
+                </li>
+              </ul>
+            </div>
 
             <a
               href="#contact"
-              class="block w-full bg-gray-800 text-white text-center py-4 rounded-full font-bold hover:bg-gray-700 transition-colors"
+              class="block w-full bg-blue-600 text-white text-center py-4 rounded-full font-bold hover:bg-blue-700 transition-colors"
             >
-              Get Started
+              🟢 Get Started
             </a>
 
             <p class="text-xs text-center text-gray-500 mt-3">
-              Perfect for: New businesses
+              Best for: Established businesses with budget
             </p>
           </div>
 
-          <!-- Growth Kit Package - MOST POPULAR -->
+          <!-- Partner Plan -->
           <div
             class="bg-white border-2 border-primary rounded-3xl p-8 slide-in relative"
           >
@@ -922,7 +1153,7 @@
             >
               <span
                 class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap"
-                >⭐ MOST POPULAR</span
+                >🤝 SHARED SUCCESS</span
               >
             </div>
 
@@ -930,174 +1161,121 @@
               <div
                 class="w-16 h-16 bg-primary bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4"
               >
-                <span class="text-2xl">📈</span>
+                <span class="text-2xl">🤝</span>
               </div>
-              <h3 class="text-2xl font-bold text-gray-800 mb-2">Growth Kit</h3>
-              <div class="text-4xl font-black text-gray-800 mb-2">$997</div>
-              <p class="text-gray-600 text-sm">Complete launch system</p>
+              <h3 class="text-3xl font-bold text-gray-800 mb-2">
+                Partner Plan
+              </h3>
+              <p class="text-gray-600 mb-4">Shared Success Model</p>
+              <div class="bg-green-50 rounded-2xl p-4 mb-4">
+                <div class="text-lg font-black text-gray-800">
+                  Low Upfront + % Share
+                </div>
+                <div class="text-sm text-gray-600">
+                  I succeed when you succeed
+                </div>
+              </div>
             </div>
 
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700"
-                  ><strong>Everything in Quick Launch</strong></span
-                >
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Flyers + door hangers design</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Facebook Business page setup</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Local SEO optimization</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Yelp & Nextdoor setup</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Email automation setup</span>
-              </li>
-            </ul>
+            <div class="mb-8">
+              <p class="text-gray-700 text-center mb-6 italic">
+                If you're starting from scratch or want a real growth partner
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700"
+                    >Full Launch Services (site, SEO, flyers, etc.)</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700"
+                    >Ongoing Updates, Marketing & Strategy</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700">Me as a committed partner</span>
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-3"
+                  >
+                    <span class="text-white text-xs">✓</span>
+                  </span>
+                  <span class="text-gray-700"
+                    >Small monthly % based on your success</span
+                  >
+                </li>
+              </ul>
+            </div>
 
             <a
               href="#contact"
               class="block w-full bg-primary text-white text-center py-4 rounded-full font-bold hover:bg-primary/90 transition-colors"
             >
-              Get Started
+              ⚡ See If We're a Fit
             </a>
 
             <p class="text-xs text-center text-gray-500 mt-3">
-              Perfect for: Serious growth
-            </p>
-          </div>
-
-          <!-- Business Builder Package -->
-          <div
-            class="bg-white border-2 border-gray-200 rounded-3xl p-8 slide-in"
-          >
-            <div class="text-center mb-8">
-              <div
-                class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4"
-              >
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                Business Builder
-              </h3>
-              <div class="text-4xl font-black text-gray-800 mb-2">$1,497</div>
-              <p class="text-gray-600 text-sm">Full marketing launch</p>
-            </div>
-
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700"
-                  ><strong>Everything in Growth Kit</strong></span
-                >
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700"
-                  >Facebook ads setup (1st month)</span
-                >
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700"
-                  >Sales scripts & canvassing plan</span
-                >
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">Marketing strategy session</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">CRM setup & training</span>
-              </li>
-              <li class="flex items-center">
-                <span
-                  class="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <span class="text-white text-xs">✓</span>
-                </span>
-                <span class="text-gray-700">30-day launch support</span>
-              </li>
-            </ul>
-
-            <a
-              href="#contact"
-              class="block w-full bg-gray-800 text-white text-center py-4 rounded-full font-bold hover:bg-gray-700 transition-colors"
-            >
-              Get Started
-            </a>
-
-            <p class="text-xs text-center text-gray-500 mt-3">
-              Perfect for: Market domination
+              Best for: New businesses with hustle & potential
             </p>
           </div>
         </div>
 
-        <!-- Package Comparison Note -->
+        <!-- Partnership Note -->
+        <div
+          class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-3xl p-6 md:p-8 max-w-4xl mx-auto slide-in"
+        >
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-xl">📝</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              Partnership Applications
+            </h4>
+            <p class="text-gray-700 mb-4">
+              Partnership offers are only available to businesses I truly
+              believe in. If you're motivated and ready to grow — apply below.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <div class="bg-white rounded-xl px-4 py-2 text-sm text-gray-600">
+                ✓ Brand-new or early-stage business
+              </div>
+              <div class="bg-white rounded-xl px-4 py-2 text-sm text-gray-600">
+                ✓ Limited budget but high motivation
+              </div>
+              <div class="bg-white rounded-xl px-4 py-2 text-sm text-gray-600">
+                ✓ Ready for long-term growth
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discovery Questions -->
         <div class="text-center mt-12 slide-in">
           <p class="text-gray-600 mb-4">
-            💬 <strong>Not sure which package fits?</strong>
+            💬 <strong>Not sure which model fits?</strong>
           </p>
           <p class="text-gray-500 text-sm max-w-2xl mx-auto">
-            Book a free 15-minute call and I'll recommend the perfect package
-            for your business goals and budget. All packages include unlimited
-            revisions until you're 100% happy.
+            Book a free 15-minute discovery call and I'll recommend the perfect
+            approach for your business goals, budget, and growth timeline. Let's
+            find the right fit!
           </p>
         </div>
       </div>
@@ -1244,7 +1422,7 @@
 
         <div class="max-w-6xl mx-auto mb-12">
           <!-- Main Testimonial -->
-          <div class="mb-8">
+          <div class="mb-12">
             <div
               class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-8 md:p-12 slide-in"
             >
@@ -1275,91 +1453,105 @@
             </div>
           </div>
 
-          <!-- Scrollable Reviews -->
+          <!-- Compact Scrollable Reviews -->
           <div class="slide-in">
-            <div class="flex items-center mb-6">
-              <h3 class="text-xl font-bold text-gray-800 mr-4">
+            <div class="text-center mb-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
                 More Client Reviews
               </h3>
-              <div class="text-sm text-gray-500">← Scroll to see all →</div>
+              <div class="text-sm text-gray-500">
+                Swipe left or right to see more reviews
+              </div>
             </div>
 
-            <div class="overflow-x-auto pb-4">
-              <div class="flex space-x-6 min-w-max">
-                <!-- Review 1 - Christian R. (Original) -->
+            <div class="overflow-x-auto pb-4 testimonial-scroll">
+              <div class="flex space-x-4 min-w-max px-4">
+                <!-- Review 1 - CR -->
                 <div
-                  class="bg-white border-2 border-gray-100 rounded-2xl p-6 min-w-[320px] flex-shrink-0"
+                  class="bg-white rounded-2xl p-6 min-w-[280px] max-w-[280px] flex-shrink-0 shadow-lg"
                 >
-                  <div class="flex items-center mb-4">
-                    <div
-                      class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                  <div class="text-center">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p
+                      class="text-gray-700 text-sm mb-4 italic leading-relaxed"
                     >
+                      "It's been a smooth and easy process working with Xavier.
+                      Website was created with everything I was looking for.
+                      Very responsive and quick to make changes."
+                    </p>
+                    <div class="font-semibold text-gray-800 text-sm">
                       CR
-                    </div>
-                    <div>
-                      <div class="text-yellow-500 text-lg">★★★★★</div>
-                      <div class="font-semibold text-gray-800">
-                        Christian R.
-                      </div>
-                      <div class="text-sm text-gray-600">
-                        Local Service Business
+                      <div class="text-gray-500 font-normal text-xs">
+                        Business Owner
                       </div>
                     </div>
                   </div>
-                  <p class="text-gray-700 italic">
-                    "Fast, helpful, and made everything simple. Professional
-                    website and business cards that actually get me noticed.
-                    Worth every penny."
-                  </p>
                 </div>
 
-                <!-- Review 2 - CR (New detailed review) -->
+                <!-- Review 2 - Les R. -->
                 <div
-                  class="bg-white border-2 border-gray-100 rounded-2xl p-6 min-w-[320px] flex-shrink-0"
+                  class="bg-white rounded-2xl p-6 min-w-[280px] max-w-[280px] flex-shrink-0 shadow-lg"
                 >
-                  <div class="flex items-center mb-4">
-                    <div
-                      class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                  <div class="text-center">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p
+                      class="text-gray-700 text-sm mb-4 italic leading-relaxed"
                     >
-                      CR
-                    </div>
-                    <div>
-                      <div class="text-yellow-500 text-lg">★★★★★</div>
-                      <div class="font-semibold text-gray-800">CR</div>
-                      <div class="text-sm text-gray-600">Business Owner</div>
-                    </div>
-                  </div>
-                  <p class="text-gray-700 italic">
-                    "It's been a smooth and easy process working with Xavier.
-                    Website was created with everything I was looking for.
-                    Xavier was very responsive and quick to make changes to the
-                    design of the website. Straight forward and honest."
-                  </p>
-                </div>
-
-                <!-- Review 3 - Les R. -->
-                <div
-                  class="bg-white border-2 border-gray-100 rounded-2xl p-6 min-w-[320px] flex-shrink-0"
-                >
-                  <div class="flex items-center mb-4">
-                    <div
-                      class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
-                    >
-                      LR
-                    </div>
-                    <div>
-                      <div class="text-yellow-500 text-lg">★★★★★</div>
-                      <div class="font-semibold text-gray-800">Les R.</div>
-                      <div class="text-sm text-gray-600">
+                      "Incredibly patient and courteous. Xavier never showed
+                      frustration even when I took hours to respond. True
+                      professional who delivers results."
+                    </p>
+                    <div class="font-semibold text-gray-800 text-sm">
+                      Les R.
+                      <div class="text-gray-500 font-normal text-xs">
                         Small Business Owner
                       </div>
                     </div>
                   </div>
-                  <p class="text-gray-700 italic">
-                    "Incredibly patient and courteous. Xavier never showed
-                    frustration even when I took hours to respond. True
-                    professional who delivers results."
-                  </p>
+                </div>
+
+                <!-- Review 3 - Maria S. -->
+                <div
+                  class="bg-white rounded-2xl p-6 min-w-[280px] max-w-[280px] flex-shrink-0 shadow-lg"
+                >
+                  <div class="text-center">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p
+                      class="text-gray-700 text-sm mb-4 italic leading-relaxed"
+                    >
+                      "Fast, helpful, and made everything simple. Professional
+                      website and business cards that actually get me noticed.
+                      Worth every penny."
+                    </p>
+                    <div class="font-semibold text-gray-800 text-sm">
+                      Maria S.
+                      <div class="text-gray-500 font-normal text-xs">
+                        Local Service Business
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review 4 - David K. -->
+                <div
+                  class="bg-white rounded-2xl p-6 min-w-[280px] max-w-[280px] flex-shrink-0 shadow-lg"
+                >
+                  <div class="text-center">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p
+                      class="text-gray-700 text-sm mb-4 italic leading-relaxed"
+                    >
+                      "Xavier took my ideas and made them even better. The whole
+                      process was stress-free and the results exceeded my
+                      expectations."
+                    </p>
+                    <div class="font-semibold text-gray-800 text-sm">
+                      David K.
+                      <div class="text-gray-500 font-normal text-xs">
+                        Restaurant Owner
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
