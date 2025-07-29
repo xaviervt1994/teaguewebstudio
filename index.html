@@ -158,7 +158,7 @@
       /* Mobile Optimization */
       @media (max-width: 768px) {
         .hero-gradient {
-          padding: 80px 20px 60px;
+          padding: 100px 20px 60px; /* Increased top padding to account for sticky nav */
           min-height: 100vh;
         }
 
@@ -224,6 +224,16 @@
         /* Testimonial mobile */
         .flex.flex-col.md\\:flex-row {
           text-align: center;
+        }
+
+        /* Success badge mobile spacing */
+        .badge-glow {
+          margin-top: 1rem;
+        }
+
+        /* Scrollable reviews on mobile */
+        .overflow-x-auto {
+          -webkit-overflow-scrolling: touch;
         }
       }
 
@@ -419,6 +429,120 @@
               >
                 <span class="text-3xl">🌱</span>
               </div>
+              <h3 class="text-xl font-bold text-gray-800">CCR Landscaping</h3>
+              <p class="text-sm text-gray-600">Full-Service Landscaping</p>
+            </div>
+
+            <div class="space-y-4 text-center">
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="text-xs text-red-600 font-semibold mb-1">
+                  BEFORE
+                </div>
+                <p class="text-sm text-gray-600">
+                  Basic website<br />Limited online presence
+                </p>
+              </div>
+
+              <div class="text-2xl">↓</div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="text-xs text-blue-600 font-semibold mb-1">
+                  LAUNCHED
+                </div>
+                <p class="text-sm text-gray-600">
+                  Professional rebrand<br />Complete digital presence
+                </p>
+              </div>
+
+              <div class="text-2xl">↓</div>
+
+              <div class="bg-green-500 text-white rounded-xl p-4 shadow-lg">
+                <div class="text-xs font-semibold mb-1">RESULT</div>
+                <p class="text-sm font-bold">Professional Upgrade</p>
+                <p class="text-xs opacity-90">
+                  Enhanced credibility & bookings
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-6 text-center">
+              <a
+                href="https://ccrlandscapingtx.com/"
+                target="_blank"
+                class="text-green-600 hover:text-green-800 font-semibold text-sm"
+              >
+                View Live Website →
+              </a>
+            </div>
+          </div>
+
+          <!-- Limestone Mechanical -->
+          <div
+            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-6 slide-in"
+          >
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg"
+              >
+                <span class="text-3xl">🔧</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">
+                Limestone Mechanical
+              </h3>
+              <p class="text-sm text-gray-600">HVAC & Mechanical Services</p>
+            </div>
+
+            <div class="space-y-4 text-center">
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="text-xs text-red-600 font-semibold mb-1">
+                  BEFORE
+                </div>
+                <p class="text-sm text-gray-600">
+                  No professional website<br />Hard to find online
+                </p>
+              </div>
+
+              <div class="text-2xl">↓</div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="text-xs text-blue-600 font-semibold mb-1">
+                  LAUNCHED
+                </div>
+                <p class="text-sm text-gray-600">
+                  Modern HVAC website<br />Professional service pages
+                </p>
+              </div>
+
+              <div class="text-2xl">↓</div>
+
+              <div class="bg-blue-500 text-white rounded-xl p-4 shadow-lg">
+                <div class="text-xs font-semibold mb-1">RESULT</div>
+                <p class="text-sm font-bold">Ready for Growth</p>
+                <p class="text-xs opacity-90">Professional online presence</p>
+              </div>
+            </div>
+
+            <div class="mt-6 text-center">
+              <a
+                href="https://limestone-mechanical.com/"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800 font-semibold text-sm"
+              >
+                View Live Website →
+              </a>
+            </div>
+          </div>
+
+          <!-- Brothers in Business -->
+          <div
+            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-6 slide-in"
+          >
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg"
+              >
+                <span class="text-3xl">🚀</span>
+              </div>
               <h3 class="text-xl font-bold text-gray-800">
                 Brothers in Business
               </h3>
@@ -431,7 +555,7 @@
                   BEFORE
                 </div>
                 <p class="text-sm text-gray-600">
-                  No online presence<br />Relying on word-of-mouth only
+                  No online presence<br />Relying on word-of-mouth
                 </p>
               </div>
 
@@ -442,13 +566,13 @@
                   LAUNCHED
                 </div>
                 <p class="text-sm text-gray-600">
-                  Website + Business cards<br />Google Business + Flyers
+                  Complete business system<br />Website + marketing materials
                 </p>
               </div>
 
               <div class="text-2xl">↓</div>
 
-              <div class="bg-green-500 text-white rounded-xl p-4 shadow-lg">
+              <div class="bg-purple-500 text-white rounded-xl p-4 shadow-lg">
                 <div class="text-xs font-semibold mb-1">RESULT</div>
                 <p class="text-sm font-bold">5 Clients in Week 1</p>
                 <p class="text-xs opacity-90">$2,500+ revenue generated</p>
@@ -459,119 +583,9 @@
               <a
                 href="https://brotherinbusinesslawncare.com/"
                 target="_blank"
-                class="text-green-600 hover:text-green-800 font-semibold text-sm"
-              >
-                View Live Website →
-              </a>
-            </div>
-          </div>
-
-          <!-- Edmond Pools -->
-          <div
-            class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-6 slide-in"
-          >
-            <div class="text-center mb-6">
-              <div
-                class="w-20 h-20 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg"
-              >
-                <span class="text-3xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800">Edmond Pools</h3>
-              <p class="text-sm text-gray-600">Pool Cleaning Service</p>
-            </div>
-
-            <div class="space-y-4 text-center">
-              <div class="bg-white rounded-xl p-4 shadow-sm">
-                <div class="text-xs text-red-600 font-semibold mb-1">
-                  BEFORE
-                </div>
-                <p class="text-sm text-gray-600">
-                  Outdated flyers only<br />No professional image
-                </p>
-              </div>
-
-              <div class="text-2xl">↓</div>
-
-              <div class="bg-white rounded-xl p-4 shadow-sm">
-                <div class="text-xs text-blue-600 font-semibold mb-1">
-                  LAUNCHED
-                </div>
-                <p class="text-sm text-gray-600">
-                  Modern website<br />Professional branding
-                </p>
-              </div>
-
-              <div class="text-2xl">↓</div>
-
-              <div class="bg-blue-500 text-white rounded-xl p-4 shadow-lg">
-                <div class="text-xs font-semibold mb-1">RESULT</div>
-                <p class="text-sm font-bold">Ready to Launch</p>
-                <p class="text-xs opacity-90">Professional presence achieved</p>
-              </div>
-            </div>
-
-            <div class="mt-6 text-center">
-              <a
-                href="https://xaviervt1994.github.io/edmond-pools-site/index.html"
-                target="_blank"
-                class="text-blue-600 hover:text-blue-800 font-semibold text-sm"
-              >
-                View Demo Site →
-              </a>
-            </div>
-          </div>
-
-          <!-- Stargate Hypnosis -->
-          <div
-            class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-6 slide-in"
-          >
-            <div class="text-center mb-6">
-              <div
-                class="w-20 h-20 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg"
-              >
-                <span class="text-3xl">🌟</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800">Stargate Hypnosis</h3>
-              <p class="text-sm text-gray-600">Wellness Practice</p>
-            </div>
-
-            <div class="space-y-4 text-center">
-              <div class="bg-white rounded-xl p-4 shadow-sm">
-                <div class="text-xs text-red-600 font-semibold mb-1">
-                  BEFORE
-                </div>
-                <p class="text-sm text-gray-600">
-                  No website<br />Hard to book appointments
-                </p>
-              </div>
-
-              <div class="text-2xl">↓</div>
-
-              <div class="bg-white rounded-xl p-4 shadow-sm">
-                <div class="text-xs text-blue-600 font-semibold mb-1">
-                  LAUNCHED
-                </div>
-                <p class="text-sm text-gray-600">
-                  Elegant website<br />Online booking system
-                </p>
-              </div>
-
-              <div class="text-2xl">↓</div>
-
-              <div class="bg-purple-500 text-white rounded-xl p-4 shadow-lg">
-                <div class="text-xs font-semibold mb-1">RESULT</div>
-                <p class="text-sm font-bold">Launch Ready</p>
-                <p class="text-xs opacity-90">Bookings simplified</p>
-              </div>
-            </div>
-
-            <div class="mt-6 text-center">
-              <a
-                href="https://xaviervt1994.github.io/stargate-hypnosis/#about"
-                target="_blank"
                 class="text-purple-600 hover:text-purple-800 font-semibold text-sm"
               >
-                View Demo Site →
+                View Live Website →
               </a>
             </div>
           </div>
@@ -592,6 +606,90 @@
               — Haze Manning, Co-Founder
             </p>
             <p class="text-gray-600">Brothers in Business Lawn Care</p>
+          </div>
+        </div>
+
+        <!-- Currently Working On Section -->
+        <div class="mt-20">
+          <div class="text-center mb-12 slide-in">
+            <div
+              class="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 text-sm font-medium mb-4"
+            >
+              🚧 Currently Working On
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Projects in Development
+            </h3>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Sneak peek at upcoming launches - these businesses are getting the
+              full LaunchLocal treatment.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Edmond Pools -->
+            <div
+              class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-6 slide-in border-2 border-blue-200 border-dashed"
+            >
+              <div class="text-center mb-6">
+                <div
+                  class="w-16 h-16 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg"
+                >
+                  <span class="text-2xl">🏊</span>
+                </div>
+                <h4 class="text-lg font-bold text-gray-800">Edmond Pools</h4>
+                <p class="text-sm text-gray-600">Pool Cleaning Service</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm text-center">
+                <div class="text-xs text-blue-600 font-semibold mb-2">
+                  IN PROGRESS
+                </div>
+                <p class="text-sm text-gray-600 mb-3">
+                  Complete redesign + marketing launch system
+                </p>
+                <a
+                  href="https://xaviervt1994.github.io/edmond-pools-site/index.html"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-semibold text-xs"
+                >
+                  View Current Demo →
+                </a>
+              </div>
+            </div>
+
+            <!-- Stargate Hypnosis -->
+            <div
+              class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-6 slide-in border-2 border-purple-200 border-dashed"
+            >
+              <div class="text-center mb-6">
+                <div
+                  class="w-16 h-16 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg"
+                >
+                  <span class="text-2xl">🌟</span>
+                </div>
+                <h4 class="text-lg font-bold text-gray-800">
+                  Stargate Hypnosis
+                </h4>
+                <p class="text-sm text-gray-600">Wellness Practice</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm text-center">
+                <div class="text-xs text-purple-600 font-semibold mb-2">
+                  IN PROGRESS
+                </div>
+                <p class="text-sm text-gray-600 mb-3">
+                  Elegant website + booking automation
+                </p>
+                <a
+                  href="https://xaviervt1994.github.io/stargate-hypnosis/#about"
+                  target="_blank"
+                  class="text-purple-600 hover:text-purple-800 font-semibold text-xs"
+                >
+                  View Current Demo →
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -817,11 +915,13 @@
 
           <!-- Growth Kit Package - MOST POPULAR -->
           <div
-            class="bg-white border-2 border-primary rounded-3xl p-8 slide-in relative transform scale-105"
+            class="bg-white border-2 border-primary rounded-3xl p-8 slide-in relative"
           >
-            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <div
+              class="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
+            >
               <span
-                class="bg-primary text-white px-6 py-2 rounded-full text-sm font-bold"
+                class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap"
                 >⭐ MOST POPULAR</span
               >
             </div>
@@ -1142,9 +1242,9 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+        <div class="max-w-6xl mx-auto mb-12">
           <!-- Main Testimonial -->
-          <div class="md:col-span-2">
+          <div class="mb-8">
             <div
               class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-8 md:p-12 slide-in"
             >
@@ -1175,49 +1275,94 @@
             </div>
           </div>
 
-          <!-- Additional Testimonials -->
-          <div
-            class="bg-white border-2 border-gray-100 rounded-2xl p-6 slide-in"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
-              >
-                CR
-              </div>
-              <div>
-                <div class="text-yellow-500 text-lg">★★★★★</div>
-                <div class="font-semibold text-gray-800">Christian R.</div>
-                <div class="text-sm text-gray-600">Local Service Business</div>
-              </div>
+          <!-- Scrollable Reviews -->
+          <div class="slide-in">
+            <div class="flex items-center mb-6">
+              <h3 class="text-xl font-bold text-gray-800 mr-4">
+                More Client Reviews
+              </h3>
+              <div class="text-sm text-gray-500">← Scroll to see all →</div>
             </div>
-            <p class="text-gray-700 italic">
-              "Fast, helpful, and made everything simple. Professional website
-              and business cards that actually get me noticed. Worth every
-              penny."
-            </p>
-          </div>
 
-          <div
-            class="bg-white border-2 border-gray-100 rounded-2xl p-6 slide-in"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
-              >
-                LR
-              </div>
-              <div>
-                <div class="text-yellow-500 text-lg">★★★★★</div>
-                <div class="font-semibold text-gray-800">Les R.</div>
-                <div class="text-sm text-gray-600">Small Business Owner</div>
+            <div class="overflow-x-auto pb-4">
+              <div class="flex space-x-6 min-w-max">
+                <!-- Review 1 - Christian R. (Original) -->
+                <div
+                  class="bg-white border-2 border-gray-100 rounded-2xl p-6 min-w-[320px] flex-shrink-0"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                    >
+                      CR
+                    </div>
+                    <div>
+                      <div class="text-yellow-500 text-lg">★★★★★</div>
+                      <div class="font-semibold text-gray-800">
+                        Christian R.
+                      </div>
+                      <div class="text-sm text-gray-600">
+                        Local Service Business
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 italic">
+                    "Fast, helpful, and made everything simple. Professional
+                    website and business cards that actually get me noticed.
+                    Worth every penny."
+                  </p>
+                </div>
+
+                <!-- Review 2 - CR (New detailed review) -->
+                <div
+                  class="bg-white border-2 border-gray-100 rounded-2xl p-6 min-w-[320px] flex-shrink-0"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                    >
+                      CR
+                    </div>
+                    <div>
+                      <div class="text-yellow-500 text-lg">★★★★★</div>
+                      <div class="font-semibold text-gray-800">CR</div>
+                      <div class="text-sm text-gray-600">Business Owner</div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 italic">
+                    "It's been a smooth and easy process working with Xavier.
+                    Website was created with everything I was looking for.
+                    Xavier was very responsive and quick to make changes to the
+                    design of the website. Straight forward and honest."
+                  </p>
+                </div>
+
+                <!-- Review 3 - Les R. -->
+                <div
+                  class="bg-white border-2 border-gray-100 rounded-2xl p-6 min-w-[320px] flex-shrink-0"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                    >
+                      LR
+                    </div>
+                    <div>
+                      <div class="text-yellow-500 text-lg">★★★★★</div>
+                      <div class="font-semibold text-gray-800">Les R.</div>
+                      <div class="text-sm text-gray-600">
+                        Small Business Owner
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 italic">
+                    "Incredibly patient and courteous. Xavier never showed
+                    frustration even when I took hours to respond. True
+                    professional who delivers results."
+                  </p>
+                </div>
               </div>
             </div>
-            <p class="text-gray-700 italic">
-              "Incredibly patient and courteous. Xavier never showed frustration
-              even when I took hours to respond. True professional who delivers
-              results."
-            </p>
           </div>
         </div>
 
