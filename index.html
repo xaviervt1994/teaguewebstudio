@@ -807,10 +807,9 @@
         <!-- Portfolio Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Brothers in Business - Enhanced -->
-          <a
-            href="https://brotherinbusinesslawncare.com/"
-            target="_blank"
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="brothers-modal"
           >
             <div
               class="h-64 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden"
@@ -839,17 +838,16 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >Visit Live Site →</span
+                  >View Details →</span
                 >
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- CCR Landscaping -->
-          <a
-            href="https://ccrlandscapingtx.com/"
-            target="_blank"
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="ccr-modal"
           >
             <div
               class="h-64 bg-gradient-to-br from-blue-500 to-green-500 relative overflow-hidden"
@@ -877,17 +875,16 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >Visit Live Site →</span
+                  >View Details →</span
                 >
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- Limestone Mechanical -->
-          <a
-            href="https://limestone-mechanical.com/"
-            target="_blank"
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="limestone-modal"
           >
             <div
               class="h-64 bg-gradient-to-br from-orange-500 to-red-500 relative overflow-hidden"
@@ -915,17 +912,16 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >Visit Live Site →</span
+                  >View Details →</span
                 >
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- Edmond Pools -->
-          <a
-            href="https://xaviervt1994.github.io/edmond-pools-site/index.html"
-            target="_blank"
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="edmond-modal"
           >
             <div
               class="h-64 bg-gradient-to-br from-blue-400 to-cyan-500 relative overflow-hidden"
@@ -955,17 +951,16 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >View Demo →</span
+                  >View Details →</span
                 >
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- Stargate Hypnosis -->
-          <a
-            href="https://xaviervt1994.github.io/stargate-hypnosis/"
-            target="_blank"
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="stargate-modal"
           >
             <div
               class="h-64 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden"
@@ -993,11 +988,11 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >View Demo →</span
+                  >View Details →</span
                 >
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- Coming Soon Placeholder -->
           <div
@@ -1031,6 +1026,326 @@
         </div>
       </div>
     </section>
+
+    <!-- Portfolio Modals -->
+    <!-- Brothers in Business Modal -->
+    <div id="brothers-modal" class="modal">
+      <div class="modal-content max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Brothers in Business - Case Study
+          </h2>
+          <button
+            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">The Challenge</h3>
+            <p class="text-gray-600 mb-6">
+              Two brothers wanted to start a lawn care business but had zero
+              online presence and no marketing strategy. They needed everything
+              from scratch.
+            </p>
+
+            <h3 class="text-xl font-bold mb-4">Our Solution</h3>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li>• Complete website with booking system</li>
+              <li>• Professional branding and business cards</li>
+              <li>• Door-to-door canvassing scripts</li>
+              <li>• Facebook ads campaign setup</li>
+              <li>• Google Business optimization</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">Results</h3>
+            <div class="space-y-3">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <div class="font-bold text-green-800">5 Clients in Week 1</div>
+                <div class="text-green-600 text-sm">
+                  $2,500+ revenue generated
+                </div>
+              </div>
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <div class="font-bold text-blue-800">48-Hour Launch</div>
+                <div class="text-blue-600 text-sm">
+                  From idea to live business
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-gradient-to-br from-green-500 to-green-700 rounded-2xl h-64 flex items-center justify-center mb-4"
+            >
+              <span class="text-white text-6xl">🌱</span>
+            </div>
+            <a
+              href="https://brotherinbusinesslawncare.com/"
+              target="_blank"
+              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              View Live Website →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CCR Landscaping Modal -->
+    <div id="ccr-modal" class="modal">
+      <div class="modal-content max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            CCR Landscaping - Case Study
+          </h2>
+          <button
+            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">The Challenge</h3>
+            <p class="text-gray-600 mb-6">
+              Established landscaping business needed a professional rebrand and
+              stronger digital presence to match their quality work and attract
+              higher-end clients.
+            </p>
+
+            <h3 class="text-xl font-bold mb-4">Our Solution</h3>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li>• Complete website redesign</li>
+              <li>• Professional photography integration</li>
+              <li>• Service portfolio showcase</li>
+              <li>• Enhanced contact forms</li>
+              <li>• SEO optimization for local searches</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">Results</h3>
+            <div class="space-y-3">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <div class="font-bold text-blue-800">Professional Upgrade</div>
+                <div class="text-blue-600 text-sm">
+                  Enhanced credibility & bookings
+                </div>
+              </div>
+              <div class="bg-green-100 p-3 rounded-lg">
+                <div class="font-bold text-green-800">Better Lead Quality</div>
+                <div class="text-green-600 text-sm">
+                  Attracting higher-value projects
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl h-64 flex items-center justify-center mb-4"
+            >
+              <span class="text-white text-6xl">🏡</span>
+            </div>
+            <a
+              href="https://ccrlandscapingtx.com/"
+              target="_blank"
+              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              View Live Website →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Limestone Mechanical Modal -->
+    <div id="limestone-modal" class="modal">
+      <div class="modal-content max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Limestone Mechanical - Case Study
+          </h2>
+          <button
+            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">The Challenge</h3>
+            <p class="text-gray-600 mb-6">
+              HVAC business had no professional website and was hard to find
+              online. Needed to establish credibility and capture leads in
+              competitive market.
+            </p>
+
+            <h3 class="text-xl font-bold mb-4">Our Solution</h3>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li>• Modern HVAC website design</li>
+              <li>• Professional service pages</li>
+              <li>• Emergency contact features</li>
+              <li>• Mobile-first responsive design</li>
+              <li>• Local SEO optimization</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">Results</h3>
+            <div class="space-y-3">
+              <div class="bg-orange-100 p-3 rounded-lg">
+                <div class="font-bold text-orange-800">Ready for Growth</div>
+                <div class="text-orange-600 text-sm">
+                  Professional online presence
+                </div>
+              </div>
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <div class="font-bold text-blue-800">Lead Generation Ready</div>
+                <div class="text-blue-600 text-sm">
+                  Optimized for conversions
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl h-64 flex items-center justify-center mb-4"
+            >
+              <span class="text-white text-6xl">🔧</span>
+            </div>
+            <a
+              href="https://limestone-mechanical.com/"
+              target="_blank"
+              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              View Live Website →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edmond Pools Modal -->
+    <div id="edmond-modal" class="modal">
+      <div class="modal-content max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Edmond Pools - Case Study
+          </h2>
+          <button
+            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">The Project</h3>
+            <p class="text-gray-600 mb-6">
+              Complete redesign for pool cleaning service with focus on
+              automation, modern aesthetics, and streamlined customer
+              experience.
+            </p>
+
+            <h3 class="text-xl font-bold mb-4">Features Built</h3>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li>• Modern, clean design aesthetic</li>
+              <li>• Automated booking system</li>
+              <li>• Service area mapping</li>
+              <li>• Customer portal integration</li>
+              <li>• Mobile-optimized interface</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">Status</h3>
+            <div class="space-y-3">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <div class="font-bold text-blue-800">Demo Complete</div>
+                <div class="text-blue-600 text-sm">Ready for launch</div>
+              </div>
+              <div class="bg-green-100 p-3 rounded-lg">
+                <div class="font-bold text-green-800">Client Approval</div>
+                <div class="text-green-600 text-sm">
+                  Final revisions in progress
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl h-64 flex items-center justify-center mb-4"
+            >
+              <span class="text-white text-6xl">🏊</span>
+            </div>
+            <a
+              href="https://xaviervt1994.github.io/edmond-pools-site/index.html"
+              target="_blank"
+              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              View Demo Site →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stargate Hypnosis Modal -->
+    <div id="stargate-modal" class="modal">
+      <div class="modal-content max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Stargate Hypnosis - Case Study
+          </h2>
+          <button
+            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">The Project</h3>
+            <p class="text-gray-600 mb-6">
+              Elegant website for wellness practice specializing in hypnosis
+              therapy. Focus on trust-building, professionalism, and easy
+              appointment booking.
+            </p>
+
+            <h3 class="text-xl font-bold mb-4">Features Built</h3>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li>• Elegant, calming design</li>
+              <li>• Animated transitions and effects</li>
+              <li>• Online booking automation</li>
+              <li>• Service explanations & FAQ</li>
+              <li>• Trust-building testimonials</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">Status</h3>
+            <div class="space-y-3">
+              <div class="bg-purple-100 p-3 rounded-lg">
+                <div class="font-bold text-purple-800">Demo Complete</div>
+                <div class="text-purple-600 text-sm">Ready for launch</div>
+              </div>
+              <div class="bg-pink-100 p-3 rounded-lg">
+                <div class="font-bold text-pink-800">Advanced Animations</div>
+                <div class="text-pink-600 text-sm">Premium user experience</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl h-64 flex items-center justify-center mb-4"
+            >
+              <span class="text-white text-6xl">🌟</span>
+            </div>
+            <a
+              href="https://xaviervt1994.github.io/stargate-hypnosis/"
+              target="_blank"
+              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              View Demo Site →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Enhanced Packages Section -->
     <section id="packages" class="py-20 bg-white relative overflow-hidden">
@@ -2119,6 +2434,41 @@
             submitBtn.disabled = false;
           }
         });
+
+      // Portfolio modal functionality
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+      const modals = document.querySelectorAll(".modal");
+      const modalCloses = document.querySelectorAll(".modal-close");
+
+      portfolioItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const modalId = item.dataset.modal;
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+          }
+        });
+      });
+
+      modalCloses.forEach((close) => {
+        close.addEventListener("click", () => {
+          modals.forEach((modal) => {
+            modal.classList.remove("active");
+          });
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Close modal on outside click
+      modals.forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+          }
+        });
+      });
 
       // Enhanced card interactions
       document.querySelectorAll(".card-3d").forEach((card) => {
