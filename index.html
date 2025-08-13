@@ -3,260 +3,2222 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teague Web Studio | Web Design & Automation</title>
+
+    <!-- SEO & Social Meta Tags -->
+    <title>
+      LaunchLocal Studio | From Idea to Clients - Done-For-You Business Launch
+    </title>
+    <meta
+      name="description"
+      content="Launch & grow your local business with our complete done-for-you system: Website, branding, SEO, ads, and client acquisition - all in one package."
+    />
+    <meta name="author" content="Xavier Teague" />
+    <meta
+      name="keywords"
+      content="business launch, local business marketing, website design, branding, facebook ads, SEO, business cards, google business profile"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://launchlocalstudio.com/" />
+    <meta
+      property="og:title"
+      content="LaunchLocal Studio | Complete Business Launch System"
+    />
+    <meta
+      property="og:description"
+      content="From idea to clients - Website, branding, SEO, ads, and growth systems for local businesses. Done-for-you launch packages starting at $500."
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#059669" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#059669",
+              secondary: "#0d9488",
+              accent: "#f59e0b",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "pulse-ring":
+                "pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite",
+              "gradient-x": "gradient-x 15s ease infinite",
+              "bounce-slow": "bounce 3s infinite",
+              "spin-slow": "spin 8s linear infinite",
+              wiggle: "wiggle 1s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Vite CSS Bundle -->
-    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .font-display {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* Advanced Hero Gradient */
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          #059669 0%,
+          #0d9488 25%,
+          #10b981 50%,
+          #059669 75%,
+          #0d9488 100%
+        );
+        background-size: 400% 400%;
+        animation: gradient-x 15s ease infinite;
+      }
+
+      @keyframes gradient-x {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      /* Glassmorphism Effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .glass-dark {
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* 3D Card Hover Effects */
+      .card-3d {
+        transform-style: preserve-3d;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .card-3d:hover {
+        transform: rotateY(10deg) rotateX(5deg) translateY(-15px) scale(1.02);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+          0 0 0 1px rgba(255, 255, 255, 0.05);
+      }
+
+      /* Floating Animation */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* Pulse Ring Animation */
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.33);
+          opacity: 1;
+        }
+        80%,
+        100% {
+          transform: scale(2.5);
+          opacity: 0;
+        }
+      }
+
+      /* Wiggle Animation */
+      @keyframes wiggle {
+        0%,
+        7% {
+          transform: rotateZ(0);
+        }
+        15% {
+          transform: rotateZ(-15deg);
+        }
+        20% {
+          transform: rotateZ(10deg);
+        }
+        25% {
+          transform: rotateZ(-10deg);
+        }
+        30% {
+          transform: rotateZ(6deg);
+        }
+        35% {
+          transform: rotateZ(-4deg);
+        }
+        40%,
+        100% {
+          transform: rotateZ(0);
+        }
+      }
+
+      /* Advanced Slide-in Animation */
+      .slide-in {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .slide-in.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Enhanced Progress Bar */
+      .progress-bar {
+        background: linear-gradient(90deg, #059669, #0d9488, #10b981, #059669);
+        background-size: 300% 300%;
+        animation: gradient-x 3s ease infinite;
+      }
+
+      /* Interactive Button Effects */
+      .btn-glow {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-glow::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .btn-glow:hover::before {
+        left: 100%;
+      }
+
+      /* Portfolio Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+      }
+
+      .modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: white;
+        border-radius: 20px;
+        max-width: 90vw;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: modalSlideIn 0.3s ease-out;
+      }
+
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: scale(0.7) translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+
+      /* Process Timeline */
+      .timeline-item {
+        position: relative;
+        padding-left: 60px;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 60px;
+        width: 2px;
+        height: calc(100% - 40px);
+        background: linear-gradient(to bottom, #059669, #0d9488);
+      }
+
+      .timeline-item:last-child::before {
+        display: none;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #059669, #0d9488);
+        box-shadow: 0 0 20px rgba(5, 150, 105, 0.5);
+      }
+
+      /* Parallax Effect */
+      .parallax {
+        transform: translateZ(0);
+      }
+
+      /* Mobile Optimizations */
+      @media (max-width: 768px) {
+        .card-3d:hover {
+          transform: translateY(-10px) scale(1.02);
+        }
+
+        .timeline-item {
+          padding-left: 40px;
+        }
+
+        .timeline-dot {
+          left: 5px;
+        }
+
+        .timeline-item::before {
+          left: 15px;
+        }
+      }
+
+      /* Custom Scrollbar */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #059669, #0d9488);
+        border-radius: 10px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(45deg, #047857, #0f766e);
+      }
+
+      /* Neon Glow Effect */
+      .neon-glow {
+        box-shadow: 0 0 5px rgba(5, 150, 105, 0.5),
+          0 0 10px rgba(5, 150, 105, 0.5), 0 0 15px rgba(5, 150, 105, 0.5),
+          0 0 20px rgba(5, 150, 105, 0.5);
+      }
+
+      /* Morphing Background */
+      .morph-bg {
+        background: linear-gradient(-45deg, #059669, #0d9488, #10b981, #059669);
+        background-size: 400% 400%;
+        animation: gradient-x 15s ease infinite;
+      }
+
+      /* Interactive Testimonial Cards */
+      .testimonial-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.05)
+        );
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.1)
+        );
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animated Counter */
+      .counter {
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* Floating Action Elements */
+      .float-action {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 100;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Enhanced Typography */
+      .text-gradient {
+        background: linear-gradient(135deg, #059669, #0d9488, #10b981);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
 
-  <body>
-    <!-- Hero Section -->
-    <!-- Example placement at top of hero section -->
-    <header class="hero">
-      <img
-        src="/Gemini_Generated_Image_sq19fasq19fasq19.png"
-        alt="Teague Web Studio logo"
-        class="site-logo"
-      />
-      <div class="hero-content">
-        <h1 class="hero-heading">
-          Custom Websites + Smart Automations for Growing Businesses
-        </h1>
-        <p>
-          HTML • CSS • JavaScript • Shopify • WordPress • GoHighLevel • Zapier
-        </p>
-        <div class="hero-buttons">
-          <a href="#portfolio" class="btn">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get a Free Quote</a>
+  <body class="bg-gray-50 overflow-x-hidden custom-scrollbar">
+    <!-- Enhanced Progress Bar -->
+    <div
+      id="progress-bar"
+      class="fixed top-0 left-0 w-0 h-2 progress-bar z-50 transition-all duration-300"
+    ></div>
+
+    <!-- Floating Action Button -->
+    <div class="float-action">
+      <a
+        href="#contact"
+        class="bg-primary text-white p-4 rounded-full shadow-lg neon-glow hover:scale-110 transition-all duration-300"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Enhanced Navigation -->
+    <nav class="fixed top-0 w-full glass z-40 transition-all duration-300">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg"
+            >
+              LL
+            </div>
+            <div>
+              <div class="font-display font-bold text-gray-800 text-xl">
+                LaunchLocal
+              </div>
+              <div class="text-xs text-gray-500 font-medium">Studio</div>
+            </div>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#process"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Process</a
+            >
+            <a
+              href="#portfolio"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Portfolio</a
+            >
+            <a
+              href="#packages"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Packages</a
+            >
+            <a
+              href="#results"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Results</a
+            >
+            <a
+              href="#contact"
+              class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-all duration-300 btn-glow"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
-    </header>
+    </nav>
 
-    <main>
-      <!-- Services -->
-      <section class="services">
-        <h2>What I Do</h2>
-        <div class="service-grid">
-          <div class="service">
-            <h3>Web Development</h3>
-            <p>Fast, clean websites built with HTML, CSS, and JavaScript.</p>
-            <img
-              src="/photo-1618477247222-acbdb0e159b3.avif"
-              alt="Web Development preview"
-              class="service-img"
-            />
+    <!-- Enhanced Hero Section -->
+    <section
+      class="hero-gradient text-white min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
+      <!-- Animated Background Elements -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full animate-float"
+        ></div>
+        <div
+          class="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-bounce-slow"
+        ></div>
+        <div
+          class="absolute top-1/2 right-20 w-16 h-16 bg-white/10 rounded-full animate-spin-slow"
+        ></div>
+        <div
+          class="absolute bottom-1/3 left-1/4 w-20 h-20 bg-white/5 rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <!-- Enhanced Success Badge -->
+        <div
+          class="inline-flex items-center glass rounded-full px-8 py-4 mb-8 neon-glow animate-wiggle"
+        >
+          <span
+            class="w-4 h-4 bg-green-400 rounded-full mr-3 animate-pulse-ring"
+          ></span>
+          <span class="text-sm font-medium"
+            >✨ Helped 15+ businesses launch successfully</span
+          >
+        </div>
+
+        <h1
+          class="font-display text-6xl md:text-8xl font-black mb-6 leading-tight text-shadow"
+        >
+          From Idea to Clients
+          <br />
+          <span
+            class="bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 bg-clip-text text-transparent animate-pulse"
+          >
+            Done-For-You
+          </span>
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto leading-relaxed"
+        >
+          Complete business launch system: Website, branding, SEO, ads, and
+          client acquisition - all handled for you so you can focus on your
+          work.
+        </p>
+
+        <!-- Enhanced Value Props -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12 text-sm">
+          <div
+            class="glass rounded-full px-6 py-3 hover:scale-105 transition-transform duration-300"
+          >
+            ⚡ Professional Website
           </div>
-          <div class="service">
-            <h3>Shopify Stores</h3>
-            <p>Launch a responsive, conversion-ready Shopify store.</p>
-            <img
-              src="/photo-1688561807971-728cd39eb71c.avif"
-              alt="Shopify store preview"
-              class="service-img"
-            />
+          <div
+            class="glass rounded-full px-6 py-3 hover:scale-105 transition-transform duration-300"
+          >
+            📍 Google Business Setup
           </div>
-          <div class="service">
-            <h3>WordPress Sites</h3>
-            <p>Easy-to-manage, mobile-friendly websites built on WordPress.</p>
-            <img
-              src="/photo-1560472355-109703aa3edc.avif"
-              alt="WordPress preview"
-              class="service-img"
-            />
+          <div
+            class="glass rounded-full px-6 py-3 hover:scale-105 transition-transform duration-300"
+          >
+            🎨 Business Cards & Flyers
           </div>
-          <div class="service">
-            <h3>GoHighLevel Funnels</h3>
-            <p>Automated funnels, lead capture, and CRM setup done right.</p>
-            <img
-              src="/screenshot-corteza-crm-1.png"
-              alt="GoHighLevel funnel preview"
-              class="service-img"
-            />
+          <div
+            class="glass rounded-full px-6 py-3 hover:scale-105 transition-transform duration-300"
+          >
+            🚀 Facebook Ads Launch
           </div>
-          <div class="service">
-            <h3>Zapier Automations</h3>
-            <p>Save time with smart, no-code business automations.</p>
-            <img
-              src="/Zapier-The-easiest-way-to-automate-your-work-1-768x377.webp"
-              alt="Zapier automation preview"
-              class="service-img"
-            />
-          </div>
-          <div class="service">
-            <h3>SEO & Speed Optimization</h3>
-            <p>Improve performance and visibility to grow online.</p>
-            <img
-              src="/photo-1560472354-b33ff0c44a43.avif"
-              alt="SEO optimization preview"
-              class="service-img"
-            />
+          <div
+            class="glass rounded-full px-6 py-3 hover:scale-105 transition-transform duration-300"
+          >
+            🎯 Client Acquisition System
           </div>
         </div>
-      </section>
 
-      <!-- Why Me -->
-      <section class="why-me">
-        <h2>Why Work With Me?</h2>
-        <ul>
-          <li>✔ 100% custom-built — no bloated themes</li>
-          <li>✔ Focused on speed, SEO, and mobile-first design</li>
-          <li>✔ Affordable and honest pricing</li>
-          <li>✔ Automation that saves real time and money</li>
-        </ul>
-      </section>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#packages"
+            class="bg-white text-primary px-10 py-5 rounded-full font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl btn-glow"
+          >
+            🚀 View Launch Packages
+          </a>
+          <a
+            href="#contact"
+            class="border-2 border-white text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300 btn-glow"
+          >
+            📞 Book Free Strategy Call
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <section id="portfolio" class="portfolio">
-        <h2>Live Projects</h2>
-        <div class="project-grid">
-          <div class="project">
-            <h3>Brothers in Business</h3>
-            <p>Lawn care website with live form automations and clean UI.</p>
+    <!-- How It Works Process Section -->
+    <section id="process" class="py-20 bg-white relative overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 slide-in">
+          <div
+            class="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-3 text-sm font-medium mb-4"
+          >
+            ⚡ Lightning Fast Process
+          </div>
+          <h2
+            class="font-display text-4xl md:text-6xl font-bold text-gray-800 mb-6 text-gradient"
+          >
+            How We Launch Your Business
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From discovery call to client-ready business in just 48-72 hours.
+            Here's our proven 4-step process.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Step 1 -->
+          <div class="timeline-item mb-16 slide-in">
+            <div class="timeline-dot animate-pulse"></div>
+            <div class="bg-white rounded-3xl p-8 shadow-xl card-3d">
+              <div class="flex items-start space-x-6">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0"
+                >
+                  1
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Discovery & Strategy Call
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    15-minute call to understand your business, goals, and
+                    choose the perfect package for your needs.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                      >Business Analysis</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                      >Package Selection</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                      >Timeline Planning</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-item mb-16 slide-in">
+            <div
+              class="timeline-dot animate-pulse"
+              style="animation-delay: 0.5s"
+            ></div>
+            <div class="bg-white rounded-3xl p-8 shadow-xl card-3d">
+              <div class="flex items-start space-x-6">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0"
+                >
+                  2
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Design & Development Sprint
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    24-48 hours of intensive work building your website,
+                    branding, and marketing materials.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                      >Website Build</span
+                    >
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                      >Brand Design</span
+                    >
+                    <span
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                      >Content Creation</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-item mb-16 slide-in">
+            <div
+              class="timeline-dot animate-pulse"
+              style="animation-delay: 1s"
+            ></div>
+            <div class="bg-white rounded-3xl p-8 shadow-xl card-3d">
+              <div class="flex items-start space-x-6">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0"
+                >
+                  3
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Launch & Optimization
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Go live with Google Business setup, SEO optimization, and
+                    initial marketing campaign launch.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
+                      >Google Setup</span
+                    >
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
+                      >SEO Launch</span
+                    >
+                    <span
+                      class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
+                      >Ads Setup</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-item slide-in">
+            <div
+              class="timeline-dot animate-pulse"
+              style="animation-delay: 1.5s"
+            ></div>
+            <div class="bg-white rounded-3xl p-8 shadow-xl card-3d">
+              <div class="flex items-start space-x-6">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0"
+                >
+                  4
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Growth & Support
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Ongoing support, performance tracking, and growth strategies
+                    to scale your business.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm"
+                      >Performance Tracking</span
+                    >
+                    <span
+                      class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm"
+                      >Growth Strategies</span
+                    >
+                    <span
+                      class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm"
+                      >24/7 Support</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Process CTA -->
+        <div class="text-center mt-16 slide-in">
+          <div class="morph-bg rounded-3xl p-8 max-w-2xl mx-auto text-white">
+            <h3 class="text-2xl font-bold mb-4">
+              Ready to Start Your 48-Hour Launch?
+            </h3>
+            <p class="mb-6 opacity-90">
+              Most businesses are live and getting clients within 72 hours of
+              our first call.
+            </p>
+            <a
+              href="#contact"
+              class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 btn-glow"
+            >
+              Start Your Launch Today →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Portfolio Gallery -->
+    <section id="portfolio" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 slide-in">
+          <div
+            class="inline-flex items-center bg-green-100 text-green-800 rounded-full px-6 py-3 text-sm font-medium mb-4"
+          >
+            🎨 Our Work
+          </div>
+          <h2
+            class="font-display text-4xl md:text-6xl font-bold text-gray-800 mb-6 text-gradient"
+          >
+            Portfolio Showcase
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Click any project to see detailed case studies, metrics, and the
+            complete transformation process.
+          </p>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Brothers in Business - Enhanced -->
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="brothers-modal"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-6xl animate-bounce-slow">🌱</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
+              >
+                LIVE SITE
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Brothers in Business
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Complete lawn care business launch with client acquisition
+                system
+              </p>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-sm text-green-600 font-semibold bg-green-100 px-3 py-1 rounded-full"
+                  >5 clients in week 1</span
+                >
+                <span
+                  class="text-primary hover:text-primary/80 font-semibold text-sm"
+                  >View Details →</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- CCR Landscaping -->
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="ccr-modal"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-blue-500 to-green-500 relative overflow-hidden"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-6xl animate-float">🏡</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
+              >
+                LIVE SITE
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                CCR Landscaping
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Professional rebrand and digital presence upgrade
+              </p>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full"
+                  >Professional upgrade</span
+                >
+                <span
+                  class="text-primary hover:text-primary/80 font-semibold text-sm"
+                  >View Details →</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Limestone Mechanical -->
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="limestone-modal"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-orange-500 to-red-500 relative overflow-hidden"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-6xl animate-spin-slow">🔧</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
+              >
+                LIVE SITE
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Limestone Mechanical
+              </h3>
+              <p class="text-gray-600 mb-4">
+                HVAC service website with professional service pages
+              </p>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-sm text-orange-600 font-semibold bg-orange-100 px-3 py-1 rounded-full"
+                  >Ready for growth</span
+                >
+                <span
+                  class="text-primary hover:text-primary/80 font-semibold text-sm"
+                  >View Details →</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Edmond Pools -->
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="edmond-modal"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-blue-400 to-cyan-500 relative overflow-hidden"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span
+                  class="text-white text-6xl animate-float"
+                  style="animation-delay: 1s"
+                  >🏊</span
+                >
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
+              >
+                IN DEVELOPMENT
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Edmond Pools</h3>
+              <p class="text-gray-600 mb-4">
+                Modern pool cleaning service with automation
+              </p>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full"
+                  >Launch ready</span
+                >
+                <span
+                  class="text-primary hover:text-primary/80 font-semibold text-sm"
+                  >View Demo →</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Stargate Hypnosis -->
+          <div
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
+            data-modal="stargate-modal"
+          >
+            <div
+              class="h-64 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-white text-6xl animate-pulse">🌟</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
+              >
+                IN DEVELOPMENT
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Stargate Hypnosis
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Elegant wellness practice with booking automation
+              </p>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-sm text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full"
+                  >Launch ready</span
+                >
+                <span
+                  class="text-primary hover:text-primary/80 font-semibold text-sm"
+                  >View Demo →</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon Placeholder -->
+          <div
+            class="bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl overflow-hidden shadow-xl card-3d slide-in"
+          >
+            <div class="h-64 flex items-center justify-center">
+              <div class="text-center">
+                <span class="text-gray-500 text-5xl mb-4 block animate-wiggle"
+                  >🚀</span
+                >
+                <h3 class="text-lg font-bold text-gray-600">
+                  Your Business Here?
+                </h3>
+                <p class="text-gray-500 text-sm">Next success story</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-600 mb-2">
+                Ready to Launch?
+              </h3>
+              <p class="text-gray-500 mb-4">
+                Your business could be our next showcase project
+              </p>
+              <a
+                href="#contact"
+                class="text-primary hover:text-primary/80 font-semibold text-sm"
+                >Get Started →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Modals -->
+    <div id="brothers-modal" class="modal">
+      <div class="modal-content max-w-4xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Brothers in Business - Case Study
+          </h2>
+          <button
+            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">The Challenge</h3>
+            <p class="text-gray-600 mb-6">
+              Two brothers wanted to start a lawn care business but had zero
+              online presence and no marketing strategy. They needed everything
+              from scratch.
+            </p>
+
+            <h3 class="text-xl font-bold mb-4">Our Solution</h3>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li>• Complete website with booking system</li>
+              <li>• Professional branding and business cards</li>
+              <li>• Door-to-door canvassing scripts</li>
+              <li>• Facebook ads campaign setup</li>
+              <li>• Google Business optimization</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">Results</h3>
+            <div class="space-y-3">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <div class="font-bold text-green-800">5 Clients in Week 1</div>
+                <div class="text-green-600 text-sm">
+                  $2,500+ revenue generated
+                </div>
+              </div>
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <div class="font-bold text-blue-800">48-Hour Launch</div>
+                <div class="text-blue-600 text-sm">
+                  From idea to live business
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-gradient-to-br from-green-500 to-green-700 rounded-2xl h-64 flex items-center justify-center mb-4"
+            >
+              <span class="text-white text-6xl">🌱</span>
+            </div>
             <a
               href="https://brotherinbusinesslawncare.com/"
               target="_blank"
-              class="btn"
-              >View Site</a
+              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
+              View Live Website →
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- Portfolio -->
-      <section id="portfolio" class="portfolio">
-        <h2>In Development</h2>
-        <div class="project-grid">
-          <div class="project">
-            <h3>Edmond Pools</h3>
-            <p>Local pool cleaning site built with HTML, CSS, and JS.</p>
-            <a
-              href="https://xaviervt1994.github.io/edmond-pools-site/index.html"
-              target="_blank"
-              class="btn"
-              >View Site</a
-            >
+    <!-- Enhanced Packages Section -->
+    <section id="packages" class="py-20 bg-white relative overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-5">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 2px 2px,
+              #059669 1px,
+              transparent 0
+            );
+            background-size: 40px 40px;
+          "
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 slide-in">
+          <div
+            class="inline-flex items-center bg-orange-100 text-orange-800 rounded-full px-6 py-3 text-sm font-medium mb-4"
+          >
+            💰 Investment Options
           </div>
-          <div class="project">
-            <h3>Stargate Hypnosis</h3>
-            <p>
-              Hypnosis site with ScrollSmoother animations and elegant design.
+          <h2
+            class="font-display text-4xl md:text-6xl font-bold text-gray-800 mb-6 text-gradient"
+          >
+            Choose Your Launch Package
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Two proven models - pick what fits your budget and growth goals.
+            Both come with our success guarantee.
+          </p>
+        </div>
+
+        <!-- Package Comparison -->
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          <!-- Standard Launch Kit -->
+          <div
+            class="bg-white border-2 border-gray-200 rounded-3xl p-8 slide-in card-3d relative"
+          >
+            <div class="text-center mb-8">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-4 animate-float"
+              >
+                <span class="text-white text-3xl">🚀</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold text-gray-800 mb-2">
+                Standard Launch Kit
+              </h3>
+              <p class="text-gray-600 mb-4">
+                One-Time Payment - Full Ownership
+              </p>
+              <div
+                class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-6 mb-4"
+              >
+                <div class="text-3xl font-black text-gray-800 mb-1">
+                  $500 - $1,500
+                </div>
+                <div class="text-sm text-gray-600">
+                  Pay once, own everything forever
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <p
+                class="text-gray-700 text-center mb-6 italic bg-blue-50 p-4 rounded-xl"
+              >
+                "Perfect if you want complete control and are ready to invest in
+                your success!"
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center bg-blue-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Professional Website
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Mobile-optimized, SEO-ready, conversion-focused
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center bg-blue-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Complete Branding Package
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Logo, business cards, flyers, brand guidelines
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center bg-blue-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Google/Yelp Optimization
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Local SEO setup and review management
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center bg-blue-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Marketing Launch Strategy
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Facebook ads setup, canvassing scripts, referral system
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              class="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white text-center py-4 rounded-2xl font-bold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 btn-glow"
+            >
+              🚀 Launch My Business
+            </a>
+
+            <p class="text-xs text-center text-gray-500 mt-4">
+              ✅ Best for: Established businesses with launch budget ready
             </p>
-            <a
-              href="https://xaviervt1994.github.io/stargate-hypnosis/#about"
-              target="_blank"
-              class="btn"
-              >View Site</a
-            >
           </div>
-          <div class="project">
-            <h3>Brothers in Business</h3>
-            <p>Lawn care site with live form automation and clean UI.</p>
-            <a
-              href="https://xaviervt1994.github.io/brothers-in-business/"
-              target="_blank"
-              class="btn"
-              >View Site</a
+
+          <!-- Partner Plan -->
+          <div
+            class="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary rounded-3xl p-8 slide-in card-3d relative"
+          >
+            <div
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"
             >
-          </div>
-          <div class="project">
-            <h3>Limestone Hypnosis</h3>
-            <p>Simple Netlify-hosted hypnosis landing page with clean UX.</p>
+              <span
+                class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap neon-glow"
+              >
+                🤝 SHARED SUCCESS MODEL
+              </span>
+            </div>
+
+            <div class="text-center mb-8 mt-4">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-3xl flex items-center justify-center mx-auto mb-4 animate-float"
+                style="animation-delay: 1s"
+              >
+                <span class="text-white text-3xl">🤝</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold text-gray-800 mb-2">
+                Partnership Plan
+              </h3>
+              <p class="text-gray-600 mb-4">Shared Success Model</p>
+              <div
+                class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-6 mb-4"
+              >
+                <div class="text-2xl font-black text-gray-800 mb-1">
+                  Low Upfront + % Share
+                </div>
+                <div class="text-sm text-gray-600">
+                  I succeed when you succeed
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <p
+                class="text-gray-700 text-center mb-6 italic bg-green-50 p-4 rounded-xl"
+              >
+                "If you're starting from scratch or want a real growth partner,
+                this is for you!"
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center bg-green-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Everything in Standard Kit
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Website, branding, SEO, marketing materials
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center bg-green-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Ongoing Updates & Optimization
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Continuous improvements and new features
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center bg-green-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Dedicated Growth Partner
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      My success is tied to your growth
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center bg-green-50 p-3 rounded-xl">
+                  <div
+                    class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-800">
+                      Revenue Share Model
+                    </div>
+                    <div class="text-sm text-gray-600">
+                      Small monthly % only when you're making money
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <a
-              href="https://limestone-preview.netlify.app"
-              target="_blank"
-              class="btn"
-              >View Site</a
+              href="#contact"
+              class="block w-full bg-gradient-to-r from-primary to-secondary text-white text-center py-4 rounded-2xl font-bold hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 btn-glow"
             >
-          </div>
-        </div>
-      </section>
+              ⚡ Apply for Partnership
+            </a>
 
-      <!-- Toolbox -->
-      <section class="stack">
-        <h2>My Toolbox</h2>
-        <p>
-          These are the tools I use to build fast, powerful, and scalable
-          solutions:
-        </p>
-        <div class="tech-logos">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          <span>Shopify</span><span>WordPress</span><span>GoHighLevel</span>
-          <span>Zapier</span><span>EmailJS</span><span>Formspree</span>
-          <span>GSAP</span><span>Vite</span><span>Ubuntu</span>
-          <span>VS Code</span><span>Tawk.to</span><span>Canva</span>
-          <span>RemoveBG</span><span>Elfsight</span>
-        </div>
-      </section>
-
-      <!-- Learning -->
-      <section class="learning">
-        <h2>What I'm Learning</h2>
-        <p>
-          I’m always improving my stack to build better, faster, and smarter.
-          Here’s what I’m working on mastering:
-        </p>
-        <div class="tech-logos">
-          <span>React</span><span>Redux</span><span>Node.js</span>
-          <span>Express.js</span><span>PostgreSQL</span><span>REST APIs</span>
-          <span>Swagger</span><span>TLS / TBAC Security</span
-          ><span>Algorithms</span>
-        </div>
-      </section>
-
-      <section class="testimonials">
-        <h2>What Clients Are Saying</h2>
-        <div class="testimonial">
-          <img
-            src="/IMG_5581.jpeg"
-            alt="Haze Manning - Brothers in Business"
-            class="testimonial-photo"
-          />
-          <div class="testimonial-text">
-            <p class="quote">
-              "Xavier is an extremely hard-working individual who responds
-              quickly, listens to all requests, is professional, and timely. As
-              a busy business owner, it sometimes takes me hours to respond and
-              Xavier never matched that with one ounce of frustration, rather he
-              was incredibly patient with me and courteous. He built the entire
-              website in a day and the rest of the time was just me tweaking
-              certain requests I had. 11 stars out of 10 for him and I will be
-              using him for any website upgrades I do in the future!"
+            <p class="text-xs text-center text-gray-500 mt-4">
+              ✅ Best for: New businesses with high motivation and growth
+              potential
             </p>
-            <p class="author">
-              — Haze Manning<br />
-              Co-Founder of Brothers in Business Lawn Care Waco
+          </div>
+        </div>
+
+        <!-- Partnership Application Info -->
+        <div
+          class="bg-gradient-to-r from-yellow-50 via-orange-50 to-yellow-50 rounded-3xl p-8 max-w-4xl mx-auto slide-in"
+        >
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-wiggle"
+            >
+              <span class="text-white text-2xl">📋</span>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-800 mb-4">
+              Partnership Application Process
+            </h4>
+            <p class="text-gray-700 mb-6">
+              Partnership spots are limited and only offered to businesses I
+              truly believe can succeed. The application process ensures we're a
+              perfect fit for long-term growth.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="text-sm font-semibold text-gray-800 mb-1">
+                  ✓ Early Stage Business
+                </div>
+                <div class="text-xs text-gray-600">
+                  0-12 months old or new idea
+                </div>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="text-sm font-semibold text-gray-800 mb-1">
+                  ✓ High Motivation
+                </div>
+                <div class="text-xs text-gray-600">
+                  Ready to work hard for success
+                </div>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="text-sm font-semibold text-gray-800 mb-1">
+                  ✓ Growth Potential
+                </div>
+                <div class="text-xs text-gray-600">Scalable business model</div>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="inline-flex items-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 btn-glow"
+            >
+              📝 Start Partnership Application
+            </a>
+          </div>
+        </div>
+
+        <!-- Package Decision Helper -->
+        <div class="text-center mt-16 slide-in">
+          <div class="bg-gray-100 rounded-3xl p-8 max-w-3xl mx-auto">
+            <h4 class="text-xl font-bold text-gray-800 mb-4">
+              💬 Not Sure Which Package Fits?
+            </h4>
+            <p class="text-gray-600 mb-6">
+              I'll ask you 3 simple questions to recommend the perfect approach:
+            </p>
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+              <div class="bg-white rounded-xl p-4">
+                <div class="font-semibold text-gray-800 mb-2">
+                  🎯 Your Stage
+                </div>
+                <div class="text-gray-600">New idea or already operating?</div>
+              </div>
+              <div class="bg-white rounded-xl p-4">
+                <div class="font-semibold text-gray-800 mb-2">
+                  💰 Your Budget
+                </div>
+                <div class="text-gray-600">
+                  Launch budget ready or need financing?
+                </div>
+              </div>
+              <div class="bg-white rounded-xl p-4">
+                <div class="font-semibold text-gray-800 mb-2">
+                  🚀 Your Goals
+                </div>
+                <div class="text-gray-600">
+                  Want ownership or ongoing partnership?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Results & Stats -->
+    <section id="results" class="py-20 morph-bg relative overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 slide-in">
+          <div
+            class="inline-flex items-center glass rounded-full px-6 py-3 text-sm font-medium mb-4 text-white"
+          >
+            📊 Proven Results
+          </div>
+          <h2
+            class="font-display text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            Real Numbers, Real Success
+          </h2>
+          <p class="text-xl text-green-100 max-w-3xl mx-auto">
+            See the measurable impact we've had on local businesses across
+            Texas.
+          </p>
+        </div>
+
+        <!-- Animated Counter Stats -->
+        <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-16">
+          <div class="text-center slide-in glass rounded-3xl p-8">
+            <div
+              class="counter text-5xl font-black text-white mb-2"
+              data-target="15"
+            >
+              0
+            </div>
+            <p class="text-green-100 font-medium">Businesses Launched</p>
+          </div>
+          <div
+            class="text-center slide-in glass rounded-3xl p-8"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="counter text-5xl font-black text-white mb-2"
+              data-target="48"
+            >
+              0
+            </div>
+            <p class="text-green-100 font-medium">Average Launch Hours</p>
+          </div>
+          <div
+            class="text-center slide-in glass rounded-3xl p-8"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="counter text-5xl font-black text-white mb-2"
+              data-target="100"
+            >
+              0
+            </div>
+            <p class="text-green-100 font-medium">Client Satisfaction %</p>
+          </div>
+          <div
+            class="text-center slide-in glass rounded-3xl p-8"
+            style="animation-delay: 0.6s"
+          >
+            <div
+              class="counter text-5xl font-black text-white mb-2"
+              data-target="75"
+            >
+              0
+            </div>
+            <p class="text-green-100 font-medium">Revenue Generated ($k)</p>
+          </div>
+        </div>
+
+        <!-- Success Stories Carousel -->
+        <div class="max-w-6xl mx-auto">
+          <h3 class="text-3xl font-bold text-white text-center mb-12">
+            Success Story Highlights
+          </h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="testimonial-card rounded-3xl p-6 text-white slide-in">
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl">🌱</span>
+                </div>
+                <h4 class="font-bold text-lg mb-2">Brothers in Business</h4>
+                <div
+                  class="bg-green-500 text-white rounded-full px-4 py-2 text-sm font-bold mb-4"
+                >
+                  5 Clients in Week 1
+                </div>
+                <p class="text-green-100 text-sm italic">
+                  "Went from idea to $2,500 revenue in 7 days with a complete
+                  business system."
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="testimonial-card rounded-3xl p-6 text-white slide-in"
+              style="animation-delay: 0.2s"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl">🏡</span>
+                </div>
+                <h4 class="font-bold text-lg mb-2">CCR Landscaping</h4>
+                <div
+                  class="bg-blue-500 text-white rounded-full px-4 py-2 text-sm font-bold mb-4"
+                >
+                  Professional Upgrade
+                </div>
+                <p class="text-green-100 text-sm italic">
+                  "Complete rebrand and digital presence that matches our
+                  quality work."
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="testimonial-card rounded-3xl p-6 text-white slide-in"
+              style="animation-delay: 0.4s"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl">⭐</span>
+                </div>
+                <h4 class="font-bold text-lg mb-2">Client Average</h4>
+                <div
+                  class="bg-yellow-500 text-white rounded-full px-4 py-2 text-sm font-bold mb-4"
+                >
+                  11/10 Rating
+                </div>
+                <p class="text-green-100 text-sm italic">
+                  "Consistently exceeding expectations with our launch process."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Testimonials -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 slide-in">
+          <div
+            class="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-3 text-sm font-medium mb-4"
+          >
+            💬 Client Love
+          </div>
+          <h2
+            class="font-display text-4xl md:text-6xl font-bold text-gray-800 mb-6 text-gradient"
+          >
+            What Business Owners Say
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real feedback from real clients who've launched and grown their
+            businesses with us.
+          </p>
+        </div>
+
+        <!-- Featured Testimonial -->
+        <div class="max-w-4xl mx-auto mb-16 slide-in">
+          <div
+            class="bg-gradient-to-br from-green-50 via-blue-50 to-green-50 rounded-3xl p-8 md:p-12 card-3d"
+          >
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div
+                class="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 animate-float"
+              >
+                HM
+              </div>
+              <div class="flex-1 text-center md:text-left">
+                <div class="text-yellow-500 text-4xl mb-4">★★★★★</div>
+                <p class="text-gray-700 text-xl mb-6 italic leading-relaxed">
+                  "Got my lawn care business online in 2 days and landed 5
+                  clients the first week. Xavier is extremely hard-working,
+                  responds quickly, listens to all requests, and is professional
+                  and timely. He built the entire website in a day and the rest
+                  was just tweaking.
+                  <strong class="text-green-600">11 stars out of 10!</strong>"
+                </p>
+                <div class="font-bold text-gray-800 text-lg">
+                  Haze Manning
+                  <div class="text-gray-600 font-normal">
+                    Co-Founder, Brothers in Business Lawn Care
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Testimonials Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div class="bg-white rounded-2xl p-6 shadow-lg card-3d slide-in">
+            <div class="text-center">
+              <div class="text-yellow-500 text-2xl mb-4">★★★★★</div>
+              <p class="text-gray-700 text-sm mb-4 italic leading-relaxed">
+                "It's been a smooth and easy process working with Xavier.
+                Website was created with everything I was looking for. Very
+                responsive and quick to make changes."
+              </p>
+              <div class="font-semibold text-gray-800 text-sm">CR</div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg card-3d slide-in"
+            style="animation-delay: 0.1s"
+          >
+            <div class="text-center">
+              <div class="text-yellow-500 text-2xl mb-4">★★★★★</div>
+              <p class="text-gray-700 text-sm mb-4 italic leading-relaxed">
+                "Incredibly patient and courteous. Xavier never showed
+                frustration even when I took hours to respond. True professional
+                who delivers results."
+              </p>
+              <div class="font-semibold text-gray-800 text-sm">Les R.</div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg card-3d slide-in"
+            style="animation-delay: 0.2s"
+          >
+            <div class="text-center">
+              <div class="text-yellow-500 text-2xl mb-4">★★★★★</div>
+              <p class="text-gray-700 text-sm mb-4 italic leading-relaxed">
+                "Fast, helpful, and made everything simple. Professional website
+                and business cards that actually get me noticed. Worth every
+                penny."
+              </p>
+              <div class="font-semibold text-gray-800 text-sm">Maria S.</div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg card-3d slide-in"
+            style="animation-delay: 0.3s"
+          >
+            <div class="text-center">
+              <div class="text-yellow-500 text-2xl mb-4">★★★★★</div>
+              <p class="text-gray-700 text-sm mb-4 italic leading-relaxed">
+                "Xavier took my ideas and made them even better. The whole
+                process was stress-free and the results exceeded my
+                expectations."
+              </p>
+              <div class="font-semibold text-gray-800 text-sm">David K.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section
+      id="contact"
+      class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden"
+    >
+      <!-- Background Elements -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full animate-float"
+        ></div>
+        <div
+          class="absolute bottom-20 right-10 w-24 h-24 bg-secondary/10 rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-12 slide-in">
+          <div
+            class="inline-flex items-center glass rounded-full px-6 py-3 text-sm font-medium mb-4"
+          >
+            🚀 Ready to Launch?
+          </div>
+          <h2 class="font-display text-4xl md:text-6xl font-bold mb-6">
+            Let's Build Your Success Story
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Book a free 15-minute discovery call or send me a message. I'll help
+            you choose between the Standard Launch Kit or Partnership model
+            based on your goals and budget.
+          </p>
+
+          <!-- Contact Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="mailto:xaviervt94@gmail.com"
+              class="bg-primary text-white px-10 py-5 rounded-full font-bold hover:bg-primary/90 transition-all duration-300 btn-glow neon-glow"
+            >
+              📧 Email Me Directly
+            </a>
+            <a
+              href="tel:+1234567890"
+              class="border-2 border-primary text-primary px-10 py-5 rounded-full font-bold hover:bg-primary hover:text-white transition-all duration-300 btn-glow"
+            >
+              📞 Call for Free Consultation
+            </a>
+          </div>
+        </div>
+
+        <!-- Enhanced Contact Form -->
+        <div class="max-w-3xl mx-auto">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xdkzydan"
+            method="POST"
+            class="space-y-6 slide-in"
+          >
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="relative">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-300 backdrop-blur-sm"
+                />
+              </div>
+              <div class="relative">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-300 backdrop-blur-sm"
+                />
+              </div>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="business"
+                placeholder="Business Name & Industry"
+                class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-300 backdrop-blur-sm"
+              />
+            </div>
+
+            <div>
+              <select
+                name="package"
+                class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white backdrop-blur-sm"
+              >
+                <option value="" class="bg-gray-800">
+                  Which model interests you?
+                </option>
+                <option value="standard" class="bg-gray-800">
+                  Standard Launch Kit - One-time payment ($500-$1,500)
+                </option>
+                <option value="partner" class="bg-gray-800">
+                  Partner Plan - Shared success model
+                </option>
+                <option value="consultation" class="bg-gray-800">
+                  Just want a consultation first
+                </option>
+                <option value="not-sure" class="bg-gray-800">
+                  Not sure - help me decide
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <select
+                name="business-stage"
+                class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white backdrop-blur-sm"
+              >
+                <option value="" class="bg-gray-800">
+                  What stage is your business?
+                </option>
+                <option value="idea" class="bg-gray-800">
+                  Just an idea - haven't started yet
+                </option>
+                <option value="new" class="bg-gray-800">
+                  New business (0-6 months)
+                </option>
+                <option value="growing" class="bg-gray-800">
+                  Growing business (6+ months)
+                </option>
+                <option value="established" class="bg-gray-800">
+                  Established business looking to upgrade
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <textarea
+                name="message"
+                placeholder="Tell me about your business goals and current situation. Are you looking for a one-time launch or ongoing partnership? What's your biggest challenge right now?"
+                required
+                rows="6"
+                class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none text-white placeholder-gray-300 backdrop-blur-sm"
+              ></textarea>
+            </div>
+
+            <input type="text" name="_gotcha" style="display: none" />
+
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-gradient-to-r from-primary to-secondary text-white px-12 py-5 rounded-full font-bold hover:from-primary/90 hover:to-secondary/90 transform hover:scale-105 transition-all duration-300 shadow-xl btn-glow neon-glow"
+              >
+                Send Message & Start Discovery Call →
+              </button>
+            </div>
+          </form>
+
+          <p id="form-status" class="text-center mt-6 font-semibold"></p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16 slide-in">
+          <div class="text-center glass rounded-2xl p-6">
+            <div
+              class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-xl">⚡</span>
+            </div>
+            <h4 class="font-bold mb-2">Lightning Fast</h4>
+            <p class="text-gray-300 text-sm">
+              Most launches completed in 48-72 hours
+            </p>
+          </div>
+          <div class="text-center glass rounded-2xl p-6">
+            <div
+              class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-xl">💬</span>
+            </div>
+            <h4 class="font-bold mb-2">Direct Access</h4>
+            <p class="text-gray-300 text-sm">
+              Work directly with me, not a team
+            </p>
+          </div>
+          <div class="text-center glass rounded-2xl p-6">
+            <div
+              class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-white text-xl">🎯</span>
+            </div>
+            <h4 class="font-bold mb-2">Results Focused</h4>
+            <p class="text-gray-300 text-sm">
+              Every decision made to get you clients
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contact -->
-      <section id="contact" class="contact">
-        <h2>Let’s Build Something</h2>
-        <p>
-          Email me at
-          <a href="mailto:xaviervt94@gmail.com">xaviervt94@gmail.com</a> or send
-          me a message below.
-        </p>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Tell me what you need..." required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </section>
-    </main>
+    <!-- Enhanced Footer -->
+    <footer class="bg-black text-white py-16">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mb-12"
+        >
+          <div class="flex items-center space-x-4 mb-6 md:mb-0">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white font-bold text-xl"
+            >
+              LL
+            </div>
+            <div>
+              <div class="font-display font-bold text-white text-2xl">
+                LaunchLocal Studio
+              </div>
+              <div class="text-sm text-gray-400">
+                Your Business Launch Partner
+              </div>
+            </div>
+          </div>
 
-    <footer>
-      <p>&copy; 2025 Teague Web Studio. Built by Xavier.</p>
+          <div class="text-center md:text-right">
+            <p class="text-gray-300 mb-2">
+              &copy; 2025 LaunchLocal Studio. Built by Xavier Teague.
+            </p>
+            <p class="text-gray-500 text-sm">
+              Professional website design and local business marketing in Waco,
+              Texas & surrounding areas
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Grid -->
+        <div class="grid md:grid-cols-4 gap-8 text-sm">
+          <div>
+            <h4 class="font-bold text-white mb-4 text-lg">Services</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="hover:text-white transition-colors">
+                Local business website design
+              </li>
+              <li class="hover:text-white transition-colors">
+                Small business branding & marketing
+              </li>
+              <li class="hover:text-white transition-colors">
+                Facebook ads for Texas businesses
+              </li>
+              <li class="hover:text-white transition-colors">
+                SEO for local service companies
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4 text-lg">Service Areas</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="hover:text-white transition-colors">
+                Waco, Texas (Primary)
+              </li>
+              <li class="hover:text-white transition-colors">Austin, Texas</li>
+              <li class="hover:text-white transition-colors">
+                Dallas-Fort Worth area
+              </li>
+              <li class="hover:text-white transition-colors">
+                All Texas small businesses
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4 text-lg">Industries</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="hover:text-white transition-colors">
+                Lawn Care & Landscaping
+              </li>
+              <li class="hover:text-white transition-colors">
+                HVAC & Home Services
+              </li>
+              <li class="hover:text-white transition-colors">
+                Pool Cleaning & Maintenance
+              </li>
+              <li class="hover:text-white transition-colors">
+                Wellness & Health Services
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-4 text-lg">Contact</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li class="hover:text-white transition-colors">
+                📧 xaviervt94@gmail.com
+              </li>
+              <li class="hover:text-white transition-colors">📍 Waco, Texas</li>
+              <li class="hover:text-white transition-colors">
+                ⚡ Fast response guaranteed
+              </li>
+              <li class="hover:text-white transition-colors">
+                🎯 Results-driven approach
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Helping small businesses in Waco, Austin, Dallas and throughout
+            Texas with affordable website design, local marketing, and business
+            growth strategies. From lawn care to pool cleaning, restaurants to
+            retail - we launch businesses that get results.
+          </p>
+        </div>
+      </div>
     </footer>
 
-    <!-- JS entry point -->
-    <script type="module" src="/src/main.js"></script>
+    <!-- Enhanced JavaScript -->
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Enhanced scroll progress bar
+      window.addEventListener("scroll", () => {
+        const scrolled =
+          (window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight)) *
+          100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+      });
+
+      // Advanced scroll reveal animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".slide-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Animated counters
+      const counters = document.querySelectorAll(".counter");
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.target);
+            const increment = target / 100;
+            let current = 0;
+
+            const updateCounter = () => {
+              if (current < target) {
+                current += increment;
+                counter.textContent = Math.ceil(current);
+                setTimeout(updateCounter, 20);
+              } else {
+                counter.textContent = target;
+              }
+            };
+
+            updateCounter();
+            counterObserver.unobserve(counter);
+          }
+        });
+      });
+
+      counters.forEach((counter) => {
+        counterObserver.observe(counter);
+      });
+
+      // Portfolio modal functionality
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+      const modals = document.querySelectorAll(".modal");
+      const modalCloses = document.querySelectorAll(".modal-close");
+
+      portfolioItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const modalId = item.dataset.modal;
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+          }
+        });
+      });
+
+      modalCloses.forEach((close) => {
+        close.addEventListener("click", () => {
+          modals.forEach((modal) => {
+            modal.classList.remove("active");
+          });
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Close modal on outside click
+      modals.forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+          }
+        });
+      });
+
+      // Enhanced form submission
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const status = document.getElementById("form-status");
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+
+          try {
+            submitBtn.textContent = "Sending your message...";
+            submitBtn.disabled = true;
+            status.textContent = "Processing your request...";
+            status.className = "text-center mt-6 font-semibold text-primary";
+
+            const response = await fetch(this.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              status.textContent =
+                "🎉 Message sent! I'll get back to you within 24 hours with a custom proposal.";
+              status.className =
+                "text-center mt-6 font-semibold text-green-400";
+              this.reset();
+
+              // Success animation
+              submitBtn.textContent = "✅ Message Sent!";
+              setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+              }, 3000);
+            } else {
+              throw new Error("Network response was not ok");
+            }
+          } catch (error) {
+            status.textContent =
+              "Oops! Something went wrong. Please email me directly at xaviervt94@gmail.com";
+            status.className = "text-center mt-6 font-semibold text-red-400";
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+
+      // Enhanced card interactions
+      document.querySelectorAll(".card-3d").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform =
+            "rotateY(10deg) rotateX(5deg) translateY(-15px) scale(1.02)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "rotateY(0) rotateX(0) translateY(0) scale(1)";
+        });
+      });
+
+      // Parallax effect for hero section
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector(".hero-gradient");
+        if (parallax) {
+          const speed = scrolled * 0.5;
+          parallax.style.transform = `translateY(${speed}px)`;
+        }
+      });
+
+      // Add loading states to CTA buttons
+      document.querySelectorAll('a[href="#contact"]').forEach((button) => {
+        button.addEventListener("click", function () {
+          const originalText = this.textContent;
+          this.textContent = "Loading...";
+          setTimeout(() => {
+            this.textContent = originalText;
+          }, 1000);
+        });
+      });
+
+      // Dynamic nav background on scroll
+      const nav = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          nav.style.background = "rgba(255, 255, 255, 0.95)";
+          nav.style.backdropFilter = "blur(20px)";
+        } else {
+          nav.style.background = "rgba(255, 255, 255, 0.1)";
+          nav.style.backdropFilter = "blur(10px)";
+        }
+      });
+
+      // Add random delays to floating elements
+      document.querySelectorAll(".animate-float").forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.5}s`;
+      });
+    </script>
   </body>
 </html>
