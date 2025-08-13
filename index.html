@@ -403,14 +403,14 @@
       class="fixed top-0 left-0 w-0 h-2 progress-bar z-50 transition-all duration-300"
     ></div>
 
-    <!-- Floating Action Button -->
-    <div class="float-action">
+    <!-- Enhanced Floating Action Button -->
+    <div class="float-action group">
       <a
         href="#contact"
-        class="bg-primary text-white p-4 rounded-full shadow-lg neon-glow hover:scale-110 transition-all duration-300"
+        class="bg-primary text-white px-6 py-4 rounded-full shadow-lg neon-glow hover:scale-110 transition-all duration-300 flex items-center space-x-2"
       >
         <svg
-          class="w-6 h-6"
+          class="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -422,7 +422,17 @@
             d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
           ></path>
         </svg>
+        <span class="font-semibold text-sm">Get Started</span>
       </a>
+      <!-- Tooltip -->
+      <div
+        class="absolute bottom-16 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0"
+      >
+        Start Your Launch Today!
+        <div
+          class="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"
+        ></div>
+      </div>
     </div>
 
     <!-- Enhanced Navigation -->
@@ -797,9 +807,10 @@
         <!-- Portfolio Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Brothers in Business - Enhanced -->
-          <div
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
-            data-modal="brothers-modal"
+          <a
+            href="https://brotherinbusinesslawncare.com/"
+            target="_blank"
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
           >
             <div
               class="h-64 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden"
@@ -828,16 +839,17 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >View Details →</span
+                  >Visit Live Site →</span
                 >
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- CCR Landscaping -->
-          <div
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
-            data-modal="ccr-modal"
+          <a
+            href="https://ccrlandscapingtx.com/"
+            target="_blank"
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
           >
             <div
               class="h-64 bg-gradient-to-br from-blue-500 to-green-500 relative overflow-hidden"
@@ -865,16 +877,17 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >View Details →</span
+                  >Visit Live Site →</span
                 >
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Limestone Mechanical -->
-          <div
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
-            data-modal="limestone-modal"
+          <a
+            href="https://limestone-mechanical.com/"
+            target="_blank"
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
           >
             <div
               class="h-64 bg-gradient-to-br from-orange-500 to-red-500 relative overflow-hidden"
@@ -902,16 +915,17 @@
                 >
                 <span
                   class="text-primary hover:text-primary/80 font-semibold text-sm"
-                  >View Details →</span
+                  >Visit Live Site →</span
                 >
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Edmond Pools -->
-          <div
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
-            data-modal="edmond-modal"
+          <a
+            href="https://xaviervt1994.github.io/edmond-pools-site/index.html"
+            target="_blank"
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
           >
             <div
               class="h-64 bg-gradient-to-br from-blue-400 to-cyan-500 relative overflow-hidden"
@@ -926,7 +940,7 @@
               <div
                 class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
               >
-                IN DEVELOPMENT
+                DEMO SITE
               </div>
             </div>
             <div class="p-6">
@@ -945,12 +959,13 @@
                 >
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Stargate Hypnosis -->
-          <div
-            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in"
-            data-modal="stargate-modal"
+          <a
+            href="https://xaviervt1994.github.io/stargate-hypnosis/"
+            target="_blank"
+            class="portfolio-item bg-white rounded-3xl overflow-hidden shadow-xl card-3d cursor-pointer slide-in block"
           >
             <div
               class="h-64 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden"
@@ -961,7 +976,7 @@
               <div
                 class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-xs font-medium"
               >
-                IN DEVELOPMENT
+                DEMO SITE
               </div>
             </div>
             <div class="p-6">
@@ -982,7 +997,7 @@
                 >
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Coming Soon Placeholder -->
           <div
@@ -1016,71 +1031,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Portfolio Modals -->
-    <div id="brothers-modal" class="modal">
-      <div class="modal-content max-w-4xl p-8">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-3xl font-bold text-gray-800">
-            Brothers in Business - Case Study
-          </h2>
-          <button
-            class="modal-close text-gray-500 hover:text-gray-700 text-2xl"
-          >
-            &times;
-          </button>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="text-xl font-bold mb-4">The Challenge</h3>
-            <p class="text-gray-600 mb-6">
-              Two brothers wanted to start a lawn care business but had zero
-              online presence and no marketing strategy. They needed everything
-              from scratch.
-            </p>
-
-            <h3 class="text-xl font-bold mb-4">Our Solution</h3>
-            <ul class="space-y-2 text-gray-600 mb-6">
-              <li>• Complete website with booking system</li>
-              <li>• Professional branding and business cards</li>
-              <li>• Door-to-door canvassing scripts</li>
-              <li>• Facebook ads campaign setup</li>
-              <li>• Google Business optimization</li>
-            </ul>
-
-            <h3 class="text-xl font-bold mb-4">Results</h3>
-            <div class="space-y-3">
-              <div class="bg-green-100 p-3 rounded-lg">
-                <div class="font-bold text-green-800">5 Clients in Week 1</div>
-                <div class="text-green-600 text-sm">
-                  $2,500+ revenue generated
-                </div>
-              </div>
-              <div class="bg-blue-100 p-3 rounded-lg">
-                <div class="font-bold text-blue-800">48-Hour Launch</div>
-                <div class="text-blue-600 text-sm">
-                  From idea to live business
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="bg-gradient-to-br from-green-500 to-green-700 rounded-2xl h-64 flex items-center justify-center mb-4"
-            >
-              <span class="text-white text-6xl">🌱</span>
-            </div>
-            <a
-              href="https://brotherinbusinesslawncare.com/"
-              target="_blank"
-              class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-            >
-              View Live Website →
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Enhanced Packages Section -->
     <section id="packages" class="py-20 bg-white relative overflow-hidden">
