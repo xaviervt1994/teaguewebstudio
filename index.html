@@ -20,7 +20,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://launchlocalstudio.com/" />
+    <meta property="og:url" content="https://teaguewebstudio.com/" />
     <meta
       property="og:title"
       content="LaunchLocal Studio | Complete Business Launch System"
@@ -393,6 +393,22 @@
       .text-shadow {
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+
+      /* New Enhancement: Subtle Animations */
+      @keyframes slideInFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .slide-in-left {
+        animation: slideInFromLeft 0.8s ease-out;
+      }
     </style>
   </head>
 
@@ -447,7 +463,7 @@
             </div>
             <div>
               <div class="font-display font-bold text-gray-800 text-xl">
-                LaunchLocal
+                TeagueWeb
               </div>
               <div class="text-xs text-gray-500 font-medium">Studio</div>
             </div>
@@ -480,6 +496,50 @@
               Get Started
             </a>
           </div>
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden pt-4 pb-2" id="mobile-menu">
+          <a
+            href="#process"
+            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+            >Process</a
+          >
+          <a
+            href="#portfolio"
+            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+            >Portfolio</a
+          >
+          <a
+            href="#packages"
+            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+            >Packages</a
+          >
+          <a
+            href="#results"
+            class="block py-2 text-gray-700 hover:text-primary transition-colors font-medium"
+            >Results</a
+          >
+          <a
+            href="#contact"
+            class="block mt-4 bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-all duration-300 text-center"
+            >Get Started</a
+          >
         </div>
       </div>
     </nav>
@@ -2005,10 +2065,10 @@
               📧 Email Me Directly
             </a>
             <a
-              href="tel:+1234567890"
+              href="tel:+12546869429"
               class="border-2 border-primary text-primary px-10 py-5 rounded-full font-bold hover:bg-primary hover:text-white transition-all duration-300 btn-glow"
             >
-              📞 Call for Free Consultation
+              📞 (254) 686-9429
             </a>
           </div>
         </div>
@@ -2254,6 +2314,9 @@
               <li class="hover:text-white transition-colors">
                 📧 xaviervt94@gmail.com
               </li>
+              <li class="hover:text-white transition-colors">
+                📱 737-268-1213
+              </li>
               <li class="hover:text-white transition-colors">📍 Waco, Texas</li>
               <li class="hover:text-white transition-colors">
                 ⚡ Fast response guaranteed
@@ -2271,7 +2334,8 @@
             Helping small businesses in Waco, Austin, Dallas and throughout
             Texas with affordable website design, local marketing, and business
             growth strategies. From lawn care to pool cleaning, restaurants to
-            retail - we launch businesses that get results.
+            retail - we launch businesses that get results. Call (254) 686-9429
+            or email xaviervt94@gmail.com to get started today.
           </p>
         </div>
       </div>
@@ -2292,6 +2356,23 @@
           }
         });
       });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking links
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
 
       // Enhanced scroll progress bar
       window.addEventListener("scroll", () => {
@@ -2434,41 +2515,6 @@
             submitBtn.disabled = false;
           }
         });
-
-      // Portfolio modal functionality
-      const portfolioItems = document.querySelectorAll(".portfolio-item");
-      const modals = document.querySelectorAll(".modal");
-      const modalCloses = document.querySelectorAll(".modal-close");
-
-      portfolioItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          const modalId = item.dataset.modal;
-          const modal = document.getElementById(modalId);
-          if (modal) {
-            modal.classList.add("active");
-            document.body.style.overflow = "hidden";
-          }
-        });
-      });
-
-      modalCloses.forEach((close) => {
-        close.addEventListener("click", () => {
-          modals.forEach((modal) => {
-            modal.classList.remove("active");
-          });
-          document.body.style.overflow = "";
-        });
-      });
-
-      // Close modal on outside click
-      modals.forEach((modal) => {
-        modal.addEventListener("click", (e) => {
-          if (e.target === modal) {
-            modal.classList.remove("active");
-            document.body.style.overflow = "";
-          }
-        });
-      });
 
       // Enhanced card interactions
       document.querySelectorAll(".card-3d").forEach((card) => {
